@@ -482,6 +482,14 @@ h2{font-size:1.4rem;line-height:1.3;letter-spacing:0;margin:0 0 8px}
 .plotb{width:100%;min-height:330px}.plotb.sm{min-height:170px}
 @media (max-width:980px){.t1-grid,.bal-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:760px){.fig-texto{grid-template-columns:1fr}.fig-h{padding:10px 12px 4px}.fig-texto{padding:10px 12px 4px}.meta{padding:6px 12px 12px}}
+.glos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:6px 0 12px}
+.glos .glo{padding:12px 14px}
+.glos .glo h4{font-size:1rem;margin:0 0 6px}
+.glos .glo p{font-size:.92rem;margin:0 0 8px;color:var(--ink)}
+.glos .glo p.aqui{color:var(--ink2);border-top:1px solid var(--line);padding-top:7px;margin:0}
+.glos .glo p.aqui::before{content:"Aquí · ";font-weight:600;color:var(--acc)}
+@media (max-width:1100px){.glos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.glos{grid-template-columns:minmax(0,1fr)}}
 </style>
 <script src="assets/plotly-2.35.2.min.js"></script>
 <script src="productos/punto1/balance_cubeta_datos.js"></script>
@@ -552,6 +560,24 @@ De 833 mm de lluvia salen 391 por el río: P − R ≈ 440 mm/año vuelven a la 
 </div>
 <p class='note'><b>Fuentes:</b> Tarea 1 del grupo (secciones Cuenca, Contexto físico, 1.5.c y Síntesis); CAMELS-PE; Budyko (1974); notas del curso
 <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s15' target='_blank' rel='noopener'>#s15</a>.</p>
+</section>
+
+<section class='slide' id='t1-conceptos' data-g='d' data-sec='1 · Evapotranspiración'>
+<p class='kicker'>Punto 1 · Conceptos que usamos</p>
+<h2>Ocho ideas para leer el resto: de la capa límite al espacio de Budyko</h2>
+<p class='intro'>Cada idea tiene dos partes: qué es y por qué importa en el Chicama. Son las que conectan la Tarea 1 con la Tarea 2.</p>
+<div class='glos'>
+<div class='card glo'><h4>Capa límite atmosférica</h4><p>La capa de aire que «siente» la superficie (de decenas de metros a 1–2 km). De día el suelo caliente la vuelve inestable y convectiva, y crece mezclando aire de arriba; de noche se enfría y queda estable, casi sin turbulencia.</p><p class='aqui'>En la estación seca crece hasta ≈ 1,5 km al mediodía y mezcla hacia abajo aire seco de la troposfera libre: por eso el déficit de vapor es máximo en julio–agosto.</p></div>
+<div class='card glo'><h4>Inversión térmica de subsidencia</h4><p>Una capa donde la temperatura aumenta con la altura. El aire que desciende en el anticiclón se calienta y forma una «tapa» que impide que las nubes crezcan.</p><p class='aqui'>Está en el 91–95 % de los sondeos de Trujillo en may–sep. Explica la estación seca, el aire seco y que la lluvia de la cuenca dependa de la convección del este.</p></div>
+<div class='card glo'><h4>Demanda evaporativa: ETo, ETp y ET</h4><p>ETo es lo que evapora un pasto de referencia bien regado (FAO-56): mide al clima. ETp es la de una superficie sin límite de agua (cada método la define distinto). ET es lo que realmente sale.</p><p class='aqui'>ETo ≈ 1 211 mm/año pero ET ≈ 440–500 mm/año: la atmósfera pide casi el triple de lo que la cuenca puede dar.</p></div>
+<div class='card glo'><h4>Déficit de presión de vapor</h4><p>e<sub>s</sub> − e<sub>a</sub>: cuánto vapor le falta al aire para saturarse. Como la curva de saturación es convexa, se calcula con T<sub>máx</sub> y T<sub>mín</sub>, no con T media.</p><p class='aqui'>Se duplica en la estación seca (0,37 → 0,80 kPa), pero el viento es débil y ese aire seco casi no se renueva: el 90 % de la ETo es radiativa.</p></div>
+<div class='card glo'><h4>Energía o agua: quién limita</h4><p>Si sobra agua, la ET depende de la energía (radiación neta). Si sobra energía, depende del agua del suelo. El cociente ET/ETo dice en qué régimen está cada mes.</p><p class='aqui'>Feb–mar: manda la energía (ET/ETo ≥ 0,75). Jun–sep: manda el agua (ET/ETo &lt; 0,2). La cuenca alterna entre los dos.</p></div>
+<div class='card glo'><h4>Razón de Bowen</h4><p>β = H/λE: cuánta energía calienta el aire frente a cuánta evapora. Baja en superficies húmedas, alta en las secas.</p><p class='aqui'>≈ 3 en el promedio de la cuenca: tres cuartas partes de la energía calientan el aire. Ese calor alimenta la capa límite convectiva.</p></div>
+<div class='card glo'><h4>Espacio de Budyko y ω</h4><p>A largo plazo, ET/P depende del índice de aridez φ = ETp/P. El parámetro ω de Fu resume lo que no es clima: suelo, vegetación, estacionalidad, regulación.</p><p class='aqui'>φ ≈ 1,5 (limitada por agua) pero ω ≈ 1,6–1,8, bajo: la lluvia llega concentrada en dic–abr, cuando la demanda es menor, y se va por el río.</p></div>
+<div class='card glo'><h4>Relación complementaria</h4><p>Cuando el suelo se seca, la energía que no evapora calienta y seca el aire: la demanda sube justo cuando la ET real baja (Bouchet, 1963).</p><p class='aqui'>Se observa: en los años secos ETo es mayor y ET menor (r = −0,58 en las anomalías de la estación seca).</p></div>
+</div>
+<p class='note'><b>Fuentes:</b> notas del curso (Hoyos, 2026) <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s15' target='_blank' rel='noopener'>#s15</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s18' target='_blank' rel='noopener'>#s18</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s25' target='_blank' rel='noopener'>#s25</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s27' target='_blank' rel='noopener'>#s27</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s31' target='_blank' rel='noopener'>#s31</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s36' target='_blank' rel='noopener'>#s36</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s37' target='_blank' rel='noopener'>#s37</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s68' target='_blank' rel='noopener'>#s68</a>;
+Allen et al. (1998), FAO-56; Tarea 1 (radiosondeos de Trujillo); apartados 1.1–1.3 de este sitio.</p>
 </section>
 
 <section class='slide' id='p1-balance' data-g='d' data-sec='1 · Evapotranspiración'>
@@ -964,7 +990,24 @@ el calor sensible sube en valor absoluto. Por eso el bosque húmedo tropical enf
 (Bosch y Hewlett, 1982), y en los Andes se ha visto con plantaciones de pino en páramo y jalca (Buytaert et al., 2007). Para que la lluvia extra compense, el reciclaje
 tendría que acercarse a 1, imposible en 2 000 km². Y la niebla solo cuenta en una franja muy pequeña. Lo que el modelo no incluye: los cambios en la infiltración y en
 el flujo de la estación seca, la erosión y la escala regional (deforestación amazónica).</p>
-<p class='note'>Modelo de equilibrio anual, de orden de magnitud; los supuestos (β, Δω, reciclaje, niebla) se pueden mover para ver cuánto pesan.</p></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> El bosque cambia el balance de energía de la superficie: refleja menos (albedo ≈ 0,12 frente a ≈ 0,20 del pastizal) y es más rugoso, así que mezcla mejor el aire. Como evapora más, una parte mayor de la energía se va en calor latente (baja la razón de Bowen), pero como también absorbe más sol, en esta cuenca limitada por agua el calor sensible sube en valor absoluto: la capa límite queda algo más húmeda y también más caliente y profunda de día, lo que la acerca al nivel de condensación. En la estación seca, la inversión de subsidencia sigue tapando la convección: el vapor extra se queda debajo como nubosidad baja y no llueve. Solo en la estación húmeda, con la atmósfera inestable, parte de ese vapor puede volver a caer en la cuenca; por eso el reciclaje local es pequeño (≈ 5 % en 2 000 km²). La niebla solo la atrapa el bosque que quede dentro de la franja de la inversión (1.5.c).</div><p class='note'><b>Fuentes:</b> Budyko (1974) en la forma de Fu (1981), con ω calibrado en 1.3; Zhang et al. (2001) para la diferencia bosque–pastizal (w = 2,0 y 0,5); Bosch y Hewlett (1982) para la comprobación y el factor 1,6 de las plantaciones de coníferas o eucalipto frente a latifoliadas; Bonan (2008) y Rotenberg y Yakir (2010) para el efecto del bosque en la temperatura según el clima; Eltahir y Bras (1996) para el reciclaje local; Bruijnzeel et al. (2011) para la captura de niebla; CAMELS-PE (cobertura de bosque de la cuenca); notas <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s36' target='_blank' rel='noopener'>#s36</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s47' target='_blank' rel='noopener'>#s47</a>.</p></section><section class='slide' id='p1-plan' data-g='d' data-sec='1 · Evapotranspiración'><p class='kicker k-data'>Punto 1 · Hoja de ruta</p><h2>Del dato a la interpretación física</h2><div class='tw'><table class='tb'><thead><tr><th>Apartado</th><th>Contenido</th><th>Estado</th></tr></thead><tbody><tr><td>1.1.a</td><td>ETo FAO-56 diaria → mensual; error por promediar</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.1.b</td><td>Pruebas de la referencia (estación, PISCOeo, TerraClimate, P − Q)</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.1.c</td><td>Métodos simples (7 de la tabla + 2 nuevos: Makkink y Linacre)</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.1.d</td><td>Términos radiativo y aerodinámico, α*, sensibilidad</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.2</td><td>ET real: balance P − Q, techo energético, productos</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.3</td><td>Energía o agua: régimen mensual, Budyko–Fu, elasticidad</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.4</td><td>Tendencias y atribución de la tendencia de ETo (+ bono de Budyko)</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.5</td><td>Gradiente altitudinal (1.5.a) y niebla bajo la inversión (1.5.c)</td><td><span class='tag done'>hecho</span></td></tr></tbody></table></div><p class='note'>La Tarea 1 dejó dos pistas que el punto 1 debe revisar: P/PET = 0,62 (subhúmedo seco) y un balance que no cierra (R/P observado 0,48 frente a 0,16 de Budyko).</p></section><section class='slide' id='p2-sitio' data-g='a' data-sec='2 · Diseño hidrológico'><p class='kicker k-arch'>Punto 2 · 2.1</p><h2>¿Por qué el punto 2 se hace en Cottbus?</h2>
+<p class='note'>Modelo de equilibrio anual, de orden de magnitud; los supuestos (β, Δω, reciclaje, niebla) se pueden mover para ver cuánto pesan.</p></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> El bosque cambia el balance de energía de la superficie: refleja menos (albedo ≈ 0,12 frente a ≈ 0,20 del pastizal) y es más rugoso, así que mezcla mejor el aire. Como evapora más, una parte mayor de la energía se va en calor latente (baja la razón de Bowen), pero como también absorbe más sol, en esta cuenca limitada por agua el calor sensible sube en valor absoluto: la capa límite queda algo más húmeda y también más caliente y profunda de día, lo que la acerca al nivel de condensación. En la estación seca, la inversión de subsidencia sigue tapando la convección: el vapor extra se queda debajo como nubosidad baja y no llueve. Solo en la estación húmeda, con la atmósfera inestable, parte de ese vapor puede volver a caer en la cuenca; por eso el reciclaje local es pequeño (≈ 5 % en 2 000 km²). La niebla solo la atrapa el bosque que quede dentro de la franja de la inversión (1.5.c).</div><p class='note'><b>Fuentes:</b> Budyko (1974) en la forma de Fu (1981), con ω calibrado en 1.3; Zhang et al. (2001) para la diferencia bosque–pastizal (w = 2,0 y 0,5); Bosch y Hewlett (1982) para la comprobación y el factor 1,6 de las plantaciones de coníferas o eucalipto frente a latifoliadas; Bonan (2008) y Rotenberg y Yakir (2010) para el efecto del bosque en la temperatura según el clima; Eltahir y Bras (1996) para el reciclaje local; Bruijnzeel et al. (2011) para la captura de niebla; CAMELS-PE (cobertura de bosque de la cuenca); notas <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s36' target='_blank' rel='noopener'>#s36</a>, <a href='https://carlosdhoyos.github.io/cursos/hidrologia/evapotranspiracion.html#s47' target='_blank' rel='noopener'>#s47</a>.</p></section><section class='slide' id='p1-plan' data-g='d' data-sec='1 · Evapotranspiración'><p class='kicker k-data'>Punto 1 · Hoja de ruta</p><h2>Del dato a la interpretación física</h2><div class='tw'><table class='tb'><thead><tr><th>Apartado</th><th>Contenido</th><th>Estado</th></tr></thead><tbody><tr><td>1.1.a</td><td>ETo FAO-56 diaria → mensual; error por promediar</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.1.b</td><td>Pruebas de la referencia (estación, PISCOeo, TerraClimate, P − Q)</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.1.c</td><td>Métodos simples (7 de la tabla + 2 nuevos: Makkink y Linacre)</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.1.d</td><td>Términos radiativo y aerodinámico, α*, sensibilidad</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.2</td><td>ET real: balance P − Q, techo energético, productos</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.3</td><td>Energía o agua: régimen mensual, Budyko–Fu, elasticidad</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.4</td><td>Tendencias y atribución de la tendencia de ETo (+ bono de Budyko)</td><td><span class='tag done'>hecho</span></td></tr><tr><td>1.5</td><td>Gradiente altitudinal (1.5.a) y niebla bajo la inversión (1.5.c)</td><td><span class='tag done'>hecho</span></td></tr></tbody></table></div><p class='note'>La Tarea 1 dejó dos pistas que el punto 1 debe revisar: P/PET = 0,62 (subhúmedo seco) y un balance que no cierra (R/P observado 0,48 frente a 0,16 de Budyko).</p></section>
+<section class='slide' id='p2-conceptos' data-g='a' data-sec='2 · Diseño hidrológico'>
+<p class='kicker'>Punto 2 · Conceptos que usamos</p>
+<h2>Diseñar con extremos: la media no dimensiona nada, la variabilidad sí</h2>
+<p class='intro'>Una obra se dimensiona con lo que pasa en la cola de la distribución. Estas ideas explican por qué cada decisión del punto 2 se tomó así.</p>
+<div class='glos'>
+<div class='card glo'><h4>Periodo de retorno y riesgo</h4><p>T = 1/p: tiempo <i>medio</i> entre excedencias, no un calendario. El riesgo de que se supere al menos una vez en n años es R = 1 − (1 − 1/T)<sup>n</sup>.</p><p class='aqui'>Una alcantarilla de T = 25 años con vida útil de 30 tiene 71 % de probabilidad de verse superada al menos una vez.</p></div>
+<div class='card glo'><h4>Desviación estándar y factor de frecuencia</h4><p>x<sub>T</sub> = x̄ + K<sub>T</sub>·s. El cuantil de diseño es la media más varias desviaciones estándar: para Gumbel, K<sub>25</sub> ≈ 2,0 y K<sub>100</sub> ≈ 3,1.</p><p class='aqui'>En Cottbus (lluvia de 60 min): x̄ ≈ 21 mm/h y s ≈ 9,5 mm/h. La lluvia de 100 años es x̄ + 3,1 s ≈ 50 mm/h: el 60 % del valor viene de s.</p></div>
+<div class='card glo'><h4>La forma de la cola (ξ)</h4><p>En la GEV, ξ &gt; 0 es una cola pesada (los extremos crecen sin límite), ξ &lt; 0 una cola acotada. Con 30 años, ξ se conoce mal.</p><p class='aqui'>ξ ≈ −0,13 en 10 min (una celda convectiva tiene un techo), ≈ 0 en 1 h y +0,2 en 2–3 h (tormentas organizadas).</p></div>
+<div class='card glo'><h4>Incertidumbre de muestreo</h4><p>Con N años de datos, el cuantil de T años es una estimación con error. El bootstrap la mide; más allá de T ≈ 2N casi todo depende de la cola supuesta.</p><p class='aqui'>N = 30: el IC 95 % de la lluvia de 100 años en 60 min va de 30 a 74 mm/h. Ese ancho es mayor que la señal de 1 °C de calentamiento.</p></div>
+<div class='card glo'><h4>Curva IDF y resolución del dato</h4><p>Intensidad media máxima en una ventana móvil de duración d, para cada T. La duración que importa es el tiempo de concentración, así que los datos deben ser más finos que t<sub>c</sub>.</p><p class='aqui'>Por eso Cottbus (10 min) y no Cajamarca (6 h): con t<sub>c</sub> de 40–100 min, una serie de 6 h obligaría a extrapolar la IDF.</p></div>
+<div class='card glo'><h4>Tiempo de concentración</h4><p>Lo que tarda en llegar al cierre el agua del punto más lejano. Define la duración de la lluvia que produce el pico.</p><p class='aqui'>En la llanura de Cottbus, con 2 m de desnivel, t<sub>c</sub> ≈ 100 min y es la mayor incertidumbre del diámetro (±29 %).</p></div>
+<div class='card glo'><h4>Método racional y escala</h4><p>Q = C·i·A/3,6 supone lluvia uniforme sobre toda la cuenca durante t<sub>c</sub>. Solo vale en cuencas de pocos km².</p><p class='aqui'>Vale en la microcuenca de 0,44 km² (FRA ≈ 0,98) y no en el Chicama de 2 170 km² (FRA ≈ 0,67 en 1 h).</p></div>
+<div class='card glo'><h4>Estacionariedad</h4><p>Suponer que la distribución de los extremos no cambia en el tiempo. Es lo que permite usar el pasado para diseñar el futuro.</p><p class='aqui'>No hay tendencia significativa en Cottbus (p ≥ 0,15), pero todas las pendientes son positivas (+2 a +8 % por década): se revisa en la diapositiva de cambio climático.</p></div>
+</div>
+<p class='note'><b>Fuentes:</b> guía, sección 2.0; Chow et al. (1988), §12.3 (factor de frecuencia), §12.6 y §13.2; Coles (2001); Hosking y Wallis (1997);
+apartados 2.2–2.4 de este sitio. Media y desviación de 60 min deducidas de los cuantiles de Gumbel por momentos (T = 2 y 10) de la tabla de 2.2.</p>
+</section><section class='slide' id='p2-sitio' data-g='a' data-sec='2 · Diseño hidrológico'><p class='kicker k-arch'>Punto 2 · 2.1</p><h2>¿Por qué el punto 2 se hace en Cottbus?</h2>
 <p class='lead'>La guía ordena los criterios: primero la longitud del registro, luego la resolución, luego la calidad, y la
 cercanía a la cuenca del punto 1 solo desempata.</p>
 <div class='tw'><table class='tb'><thead><tr><th>Serie</th><th>Ubicación</th><th>Resolución</th><th>Registro útil</th><th>Cumple</th></tr></thead><tbody><tr><td>Cajamarca aeropuerto (SPJR)</td><td>≈ 50 km NE, 2 676 m</td><td>6 h (nunca horaria)</td><td>5 años con ≥ 80 % de reportes de 6 h</td><td><span class='tag blk'>bloqueado</span></td></tr><tr><td>San Marcos (84479)</td><td>≈ 60 km E</td><td>1 h</td><td>solo 2026</td><td><span class='tag blk'>bloqueado</span></td></tr><tr><td>Estaciones automáticas SENAMHI en la cuenca</td><td>dentro</td><td>1 h</td><td>desde ~2014 (≤ 12 años, a pedido)</td><td><span class='tag blk'>bloqueado</span></td></tr><tr><td><b>Cottbus, DWD 00880</b></td><td>Alemania</td><td><b>10 min</b></td><td><b>30 años válidos</b> (1993–2025)</td><td><span class='tag done'>hecho</span></td></tr></tbody></table></div>
@@ -1263,7 +1306,69 @@ la lluvia que sigue al pico todavía supera la salida.</p></div>
 <div><p><b>Sensibilidad del volumen (m³):</b></p>
 <div class='tw'><table class='tb'><thead><tr><th>Caso</th><th>Trapecio crítico</th><th>Inicio</th><th>Centro</th><th>Final</th></tr></thead><tbody><tr><td>base</td><td>6 400</td><td>6 500</td><td>7 900</td><td>7 700</td></tr><tr><td>tc_post = 20 min (Kirpich × 0,2: canales de concreto)</td><td>7 000</td><td>6 800</td><td>8 200</td><td>8 500</td></tr><tr><td>tc_post = 60 min (urbanización menos eficiente)</td><td>5 700</td><td>6 200</td><td>7 400</td><td>7 000</td></tr><tr><td>C_post − 20 %</td><td>4 400</td><td>4 700</td><td>5 600</td><td>5 400</td></tr><tr><td>C_post + 20 %</td><td>8 400</td><td>8 500</td><td>10 100</td><td>10 200</td></tr><tr><td>hietograma de 2 h</td><td>—</td><td>6 500</td><td>7 700</td><td>7 600</td></tr><tr><td>hietograma de 3 h</td><td>—</td><td>6 500</td><td>7 800</td><td>7 700</td></tr><tr><td>hietograma de 4 h</td><td>—</td><td>6 500</td><td>7 800</td><td>7 700</td></tr><tr><td>hietograma de 12 h</td><td>—</td><td>6 500</td><td>7 900</td><td>7 700</td></tr></tbody></table></div>
 <p><b>Lectura:</b> C es lo que más mueve el volumen (±20 % en C da −28 % y +29 %). El tc urbano lo cambia entre 5 y 10 % (20 o 60 min en vez de 41). La duración del hietograma
-casi no importa más allá de 3 h, porque la cola de lluvia débil sale por el orificio sin acumularse. Con la duración crítica de 1 h, las 6 h escogidas (≈ 9 tc) son de sobra.</p></div></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> En una tormenta convectiva el pico suele llegar pronto: la corriente ascendente se carga de agua y, al caer la lluvia, se vuelve una corriente descendente fría que corta la entrada de aire húmedo y la celda se debilita. Por eso las tormentas de verano de Cottbus se parecen más al patrón «pico al inicio» (Huff, primer cuartil). Las lluvias frontales estratiformes, con atmósfera estable sobre una capa fría, son más uniformes y largas, y casi nunca llenan este tanque. El diseño usa el patrón más exigente (centro), no el más frecuente.</div><p class='note'><b>Fuentes:</b> guía 2.4, problema B, 2 y 4; Chow et al. (1988), §14.4 (bloques alternos); Huff (1967) para la posición del pico en tormentas convectivas; Kuiry y Sen (2021), cap. 3.</p></section><section class='slide' id='decisiones' data-g='d' data-sec='3 · Estado'><p class='kicker k-data'>Decisiones del grupo</p><h2>Propuesta para cada decisión abierta (para revisar y aprobar)</h2>
+casi no importa más allá de 3 h, porque la cola de lluvia débil sale por el orificio sin acumularse. Con la duración crítica de 1 h, las 6 h escogidas (≈ 9 tc) son de sobra.</p></div></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> En una tormenta convectiva el pico suele llegar pronto: la corriente ascendente se carga de agua y, al caer la lluvia, se vuelve una corriente descendente fría que corta la entrada de aire húmedo y la celda se debilita. Por eso las tormentas de verano de Cottbus se parecen más al patrón «pico al inicio» (Huff, primer cuartil). Las lluvias frontales estratiformes, con atmósfera estable sobre una capa fría, son más uniformes y largas, y casi nunca llenan este tanque. El diseño usa el patrón más exigente (centro), no el más frecuente.</div><p class='note'><b>Fuentes:</b> guía 2.4, problema B, 2 y 4; Chow et al. (1988), §14.4 (bloques alternos); Huff (1967) para la posición del pico en tormentas convectivas; Kuiry y Sen (2021), cap. 3.</p></section>
+<section class='slide' id='p2-aburra' data-g='a' data-sec='2 · Diseño hidrológico'>
+<p class='kicker'>Punto 2 · ¿Y si la obra estuviera en el Valle de Aburrá?</p>
+<h2>La misma alcantarilla en Medellín sería otra obra: la hidroclimatología cambia el problema</h2>
+<p class='intro'>El método es el mismo, pero cambian la lluvia que la dimensiona, la pendiente, el tiempo de concentración y lo que de verdad daña la obra.</p>
+<div class='tw'><table class='tb'><thead><tr><th>Rasgo</th><th>Microcuenca en Cottbus (Brandeburgo)</th><th>Quebrada pequeña en el Valle de Aburrá</th><th>Consecuencia para el diseño</th></tr></thead><tbody>
+<tr><td>Régimen de lluvia</td><td>Una temporada de tormentas convectivas (may–sep); invierno de lluvias frontales débiles</td><td>Bimodal (abr–may y oct–nov), con convección casi todo el año</td><td>En Aburrá el año hidrológico no tiene un corte limpio: los máximos anuales pueden caer en cualquiera de las dos temporadas</td></tr>
+<tr><td>Qué dispara la tormenta</td><td>Calentamiento del suelo en la tarde; capa límite inestable sobre la llanura</td><td>Convección de tarde y noche, forzada por las laderas del valle encajado</td><td>En un valle encajado la lluvia cambia mucho en pocos km: un pluviómetro a 7 km puede no representar la quebrada</td></tr>
+<tr><td>Relieve y t<sub>c</sub></td><td>2 m de desnivel en 1,85 km: t<sub>c</sub> ≈ 100 min</td><td>Pendientes de ladera de 10–40 %: con L = 2 km y S = 10 %, Kirpich da t<sub>c</sub> ≈ 16 min</td><td>Duraciones de diseño de 10–20 min: hacen falta datos de 5–10 min, y la intensidad de diseño es mucho mayor</td></tr>
+<tr><td>Régimen hidráulico en el tubo</td><td>Casi crítico (Fr ≈ 1), velocidades de 2 m/s</td><td>Supercrítico, velocidades altas</td><td>En Aburrá pesan la abrasión, la disipación de energía a la salida y el resalto hidráulico</td></tr>
+<tr><td>Qué tapa o daña la obra</td><td>Encharcamiento y remanso en llanura; poca carga de sedimentos</td><td>Avenidas torrenciales: sedimentos, rocas y troncos que obstruyen la entrada</td><td>El caudal líquido no basta: hay que diseñar para obstrucción (rejillas, sobredimensionar, retención de sedimentos)</td></tr>
+<tr><td>Urbanización</td><td>Escenario hipotético del problema B (prados → 50 % impermeable)</td><td>Ya ocurrió: laderas urbanizadas y quebradas canalizadas o cubiertas</td><td>El tanque de detención es difícil de ubicar en ladera; se buscan soluciones distribuidas (SUDS, tanques en predios)</td></tr>
+</tbody></table></div>
+<div class='callout amber'><b>Lectura.</b> La IDF y el método racional son los mismos. La diferencia está en la hidroclimatología y en la geomorfología: en una llanura templada la obra falla por
+<i>volumen</i> y remanso; en una quebrada andina tropical falla por <i>energía</i>, obstrucción y arrastre. Por eso no se puede copiar el diseño de un sitio a otro, ni siquiera el periodo de retorno.</div>
+<p class='note'><b>Cómo se construyó:</b> comparación cualitativa del grupo. La columna de Cottbus sale de los resultados de este sitio. La de Aburrá describe rasgos conocidos del valle
+(régimen bimodal, laderas empinadas, quebradas urbanas) y un cálculo ilustrativo de Kirpich (t<sub>c</sub> = 0,0195 L<sup>0,77</sup> S<sup>−0,385</sup>), sin datos de una quebrada concreta.
+Para cifras hay que usar las redes de SIATA y los estudios del Área Metropolitana: <b>pendiente de verificar antes de la exposición</b>.</p>
+</section>
+<section class='slide' id='p25-clima' data-g='a' data-sec='2 · Diseño hidrológico'>
+<p class='kicker'>Punto 2 · Cambio climático y adaptación</p>
+<h2>¿Qué le pasa a la obra si los extremos se intensifican? La desviación estándar decide más que la media</h2>
+<p class='intro'>Con más calor el aire puede contener ≈ 7 % más vapor por grado (Clausius–Clapeyron), y las lluvias cortas e intensas pueden crecer a esa tasa o más rápido
+(Westra et al., 2014). Mueva el calentamiento y la variabilidad, y vea qué pasa con la alcantarilla que ya diseñamos.</p>
+<div class='bal-grid'>
+<div class='panel bal-ctl'>
+<h4 style='margin-top:0'>Escenario</h4>
+<div class='ctl'><label for='c-dt'>Calentamiento ΔT</label><input id='c-dt' type='range' min='0' max='4' step='0.25' value='1.5'><output id='c-dto'></output></div>
+<div class='ctl'><label for='c-r'>Tasa (por °C)</label><input id='c-r' type='range' min='0' max='14' step='0.5' value='7'><output id='c-ro'></output></div>
+<div class='ctl'><label for='c-s'>Cambio extra en σ</label><input id='c-s' type='range' min='-10' max='40' step='5' value='0'><output id='c-so'></output></div>
+<div class='selector' role='group' aria-label='Atajos' style='padding:2px 0'>
+<button type='button' data-cl='0,7,0' aria-pressed='false'>Hoy</button><button type='button' data-cl='1.5,7,0' aria-pressed='true'>+1,5 °C, 7 %</button>
+<button type='button' data-cl='2,14,0' aria-pressed='false'>+2 °C, 2×CC</button><button type='button' data-cl='0,7,25' aria-pressed='false'>solo σ +25 %</button></div>
+<h4>Alcantarilla del problema A (T = 25, n = 30 años)</h4>
+<div class='readout' id='c-out'></div>
+</div>
+<article class='fig' style='margin:0'>
+<header class='fig-h'><h3>Intensidad de duración t<sub>c</sub> = 102 min según el periodo de retorno</h3><span class='tipo int'>interactiva</span></header>
+<div class='fig-cuerpo'><div id='g-clima' class='plotb' style='min-height:380px'></div></div>
+</article>
+</div>
+<article class='fig' style='margin-top:18px'>
+<div class='fig-texto' style='border-top:0'>
+<div><h4>Qué muestra</h4>
+<p><b>La escala pesa más que la media.</b> En la GEV de la IDF, a(T) = μ + σ·y<sub>T</sub>. Para T = 25 el término de σ es el 57 % del cuantil, y para T = 100 el 66 %.
+Si el clima solo aumenta la variabilidad (σ +25 %, misma media), la lluvia de 25 años sube ≈ 14 %, más que con 1,5 °C de calentamiento a 7 %/°C (≈ 11 %).</p>
+<p><b>La obra aguanta por el diámetro comercial.</b> Como D ∝ Q<sup>3/8</sup>, un 10 % más de caudal pide solo 3–4 % más de diámetro. El DN 1 000 ya cubría T ≈ 470 años (valor central),
+así que con +2 °C a 7 %/°C sigue en T ≈ 180 años; solo con el doble de la tasa (14 %/°C) baja a T ≈ 80. Lo que más se reduce es el periodo de retorno efectivo, no la necesidad de cambiar el tubo.</p>
+<p class='leer'><b>Lo que más pesa hoy sigue siendo la incertidumbre de 30 años de datos:</b> el IC 95 % de la IDF mueve el diámetro entre 0,71 y 0,91 m (un rango del 25 %), más que cualquier escenario de 1–2 °C a 7 %/°C.</p></div>
+<div><h4>Cómo se construyó</h4>
+<p>IDF de 2.3: i(d,T) = a(T)/(d + 0,137)<sup>0,872</sup>, con a(T) GEV de μ = 19,42, σ = 7,52, ξ = 0,044 (L-momentos). Escenario: μ' = μ·f y σ' = σ·f·(1 + Δσ),
+con f = (1 + r)<sup>ΔT</sup>. Caudal Q = C·i·A·FRA/3,6 con C = 0,335, A = 0,437 km², FRA = 0,976. Diámetro por Manning a tubo lleno (n = 0,013, S₀ = 0,5 %).
+T efectivo del DN 1 000: el T cuya intensidad iguala la capacidad (1,70 m³/s), sin la incertidumbre del Monte Carlo de 2.4.</p>
+<p class='leer'><b>Supuestos.</b> El escalado de 7 %/°C es una regla global; Westra et al. (2014) muestran tasas de 0 a 14 %/°C según la duración y la región. C se mantiene fijo
+aunque en Chow crece con T. Es un análisis de sensibilidad, no una proyección: no usa salidas de modelos climáticos para Brandeburgo.</p></div>
+</div>
+<div class='callout green' style='margin:4px 18px 16px'><b>Decisiones de adaptación que se desprenden.</b> (1) Diseñar con la banda de incertidumbre, no con el valor central. (2) Preferir obras que fallen
+«con gracia»: un vertedero de excedencias en el tanque, un terraplén que pueda desbordar sin romperse. (3) Dejar margen barato: subir un diámetro comercial cuesta poco frente al daño
+(bono 2.5.1). (4) Diseño adaptativo: reservar espacio para ampliar el tanque y revisar la IDF cada década, con la tendencia positiva (+2 a +8 %/década) que ya muestran los datos.</div>
+<p class='meta'><b>Fuentes:</b> guía 2.5.3; Westra et al. (2014); Coles (2001), cap. 6 (no estacionariedad); Chow et al. (1988), §13.2; IDF y diseño de los apartados 2.3 y 2.4.
+Cálculo en el navegador con los parámetros publicados en 2.3; se puede reproducir con <span class='script'>codigo/punto2/11_escenarios_clima.py</span>.</p>
+</article>
+</section><section class='slide' id='decisiones' data-g='d' data-sec='3 · Estado'><p class='kicker k-data'>Decisiones del grupo</p><h2>Propuesta para cada decisión abierta (para revisar y aprobar)</h2>
 <div class='two even'><div><h3>Punto 1</h3><div class='tw'><table class='tb'><thead><tr><th>Decisión</th><th>Propuesta</th><th>Por qué</th></tr></thead><tbody><tr><td>Demanda de referencia en 1.2–1.4</td><td>ERA5-Land FAO-56, con banda de −10 a −25 %</td><td>Es la única con todas las variables de FAO-56 por hora; la estación de Cajamarca y los productos dan el tamaño del sesgo (1.1.b), que se propaga como incertidumbre.</td></tr><tr><td>Umbrales de régimen ET/ETo</td><td>0,75 (energía) y 0,40 (agua)</td><td>Separan bien los meses en la gráfica de fracción evaporativa frente a humedad del suelo (1.3) y quedan cerca del umbral del ajuste segmentado; falta probar cuánto cambia la clasificación con ±0,05.</td></tr><tr><td>ω de Budyko–Fu</td><td>rango 1,6–1,8 (central 1,57 del balance)</td><td>Un único valor ocultaría que ET real tiene ±158 mm de incertidumbre; el rango expresa esa incertidumbre.</td></tr><tr><td>Apartado opcional 1.6</td><td>Hacerlo: 1.6.1, déficit climático Σ(ETo − P) de mayo a septiembre</td><td>Vale +0,2, usa datos ya calculados y conecta con el punto 2 (frecuencia con GEV-LMOM). Riesgo: la guía lo ata a usar la misma cuenca en el punto 2; se declara y se analiza la serie del Chicama.</td></tr><tr><td>Verificación de fuentes</td><td>Leer McMillan et al. (2012) y confirmar en FLUXNET que no hay torres en la región</td><td>La política exige haber leído las fuentes citadas: si no se confirma, se quita la cita.</td></tr></tbody></table></div>
 <div class='callout teal'><b>Trabajo individual</b> de Marlin Julie Schwebel. Pendiente: número del grupo para el nombre del ZIP
 (T2_202602_GNN_Schwebel.zip).</div>
@@ -1693,6 +1798,52 @@ const G = {
     Plotly.react("g-obraB", tr, base({ margin: { l: 0, r: 0, t: 0, b: 0 }, legend: { orientation: "h", y: 0, x: 0, font: { size: 11 } },
       scene: { xaxis: ax("x (m)"), yaxis: ax("y (m)"), zaxis: ax("z (m)"), aspectmode: "manual", aspectratio: { x: 1.5, y: 1.5, z: 0.3 },
         camera: { eye: { x: -1.3, y: -1.65, z: 0.95 } } } }), CFG);
+  },
+
+  /* ───── Cambio climático: escalado de la IDF (GEV de 2.3) y efecto sobre la alcantarilla; mismo cálculo que codigo/punto2/11_escenarios_clima.py ───── */
+  "p25-clima": () => {
+    const el = id => document.getElementById(id), sl = el("p25-clima");
+    if (!sl.dataset.ok) {
+      sl.dataset.ok = 1;
+      ["c-dt", "c-r", "c-s"].forEach(id => el(id).addEventListener("input", () => {
+        sl.querySelectorAll("[data-cl]").forEach(x => x.setAttribute("aria-pressed", "false")); G["p25-clima"](); }));
+      sl.querySelectorAll("[data-cl]").forEach(b => b.addEventListener("click", () => {
+        const [dt, r, ds] = b.dataset.cl.split(",").map(Number); el("c-dt").value = dt; el("c-r").value = r; el("c-s").value = ds;
+        sl.querySelectorAll("[data-cl]").forEach(x => x.setAttribute("aria-pressed", x === b)); G["p25-clima"](); }));
+    }
+    const MU = 19.42, SG = 7.52, XI = 0.044, TH = 0.137, ETA = 0.872, TC = 102 / 60, C = 0.335, A = 0.437, FRA = 0.976, NM = 0.013, S0 = 0.005, QCAP = 1.695, VIDA = 30, TD = 25;
+    const dt = +el("c-dt").value, r = +el("c-r").value / 100, ds = +el("c-s").value / 100;
+    el("c-dto").textContent = "+" + dt.toFixed(2).replace(".", ",").replace(/0$/, "") + " °C"; el("c-ro").textContent = (100 * r).toFixed(1).replace(".", ",") + " %";
+    el("c-so").textContent = (ds >= 0 ? "+" : "−") + Math.abs(100 * ds).toFixed(0) + " %";
+    const f = Math.pow(1 + r, dt), mu2 = MU * f, sg2 = SG * f * (1 + ds);
+    const yT = T => (Math.pow(-Math.log(1 - 1 / T), -XI) - 1) / XI;           // a(T) = μ + σ·y_T
+    const iT = (T, mu, sg) => (mu + sg * yT(T)) / Math.pow(TC + TH, ETA);
+    const Tde = (aObj, mu, sg) => { const y = (aObj - mu) / sg, z = 1 + XI * y; if (z <= 0) return 1; const q = Math.pow(z, -1 / XI); return 1 / (1 - Math.exp(-q)); };
+    const Qde = i => C * i * A * FRA / 3.6, Dde = Q => Math.pow(NM * Q / (0.312 * Math.sqrt(S0)), 3 / 8);
+    const DN = [0.6, 0.8, 1.0, 1.2, 1.4, 1.5, 1.6, 1.8, 2.0], dn = d => DN.find(v => v >= d - 1e-9) || 2.0;
+    const i0 = iT(TD, MU, SG), i1 = iT(TD, mu2, sg2), Q1 = Qde(i1), D1 = Dde(Q1);
+    const aCap = QCAP * 3.6 / (C * A * FRA) * Math.pow(TC + TH, ETA);
+    const T0 = Tde(aCap, MU, SG), T1 = Tde(aCap, mu2, sg2), aHoy25 = MU + SG * yT(TD), Tnuevo = Tde(aHoy25, mu2, sg2);
+    const riesgo = T => 1 - Math.pow(1 - 1 / T, VIDA), pc = v => (100 * v).toFixed(0) + " %", sg = v => (v >= 0 ? "+" : "−") + Math.abs(100 * v).toFixed(0) + " %";
+    const fmtT = T => T > 999 ? "> 1 000" : Math.round(T).toString();
+    el("c-out").innerHTML =
+      `<div><span>i(t<sub>c</sub>, 25 años)</span><b>${i1.toFixed(1).replace(".", ",")} mm/h</b></div><div><span>cambio</span><b class='c-lw'>${sg(i1 / i0 - 1)}</b></div>` +
+      `<div><span>Q de diseño</span><b>${Q1.toFixed(2).replace(".", ",")} m³/s</b></div><div><span>D calculado → DN</span><b>${D1.toFixed(2).replace(".", ",")} → ${dn(D1).toFixed(2).replace(".", ",")} m</b></div>` +
+      `<div><span>T efectivo del DN 1 000</span><b class='c-data'>${fmtT(T0)} → ${fmtT(T1)} años</b></div><div><span>riesgo en 30 años</span><b class='c-data'>${pc(riesgo(T0))} → ${pc(riesgo(T1))}</b></div>` +
+      `<div style='min-width:100%'><span>la lluvia de 25 años de hoy pasa a ser la de</span><b class='c-sw'>≈ ${fmtT(Tnuevo)} años</b></div>`;
+    const Ts = []; for (let k = 0; k <= 60; k++) Ts.push(Math.pow(10, 0.3 + k * (2.7 - 0.3) / 60));
+    const capI = aCap / Math.pow(TC + TH, ETA);
+    Plotly.react("g-clima", [
+      { x: Ts, y: Ts.map(T => iT(T, MU, SG)), name: "hoy (IDF de 2.3)", mode: "lines", line: { color: css("--vPL"), width: 3 }, hovertemplate: "T = %{x:.0f} años: %{y:.1f} mm/h<extra>hoy</extra>" },
+      { x: Ts, y: Ts.map(T => iT(T, mu2, sg2)), name: "escenario", mode: "lines", line: { color: css("--neg"), width: 3, dash: "dash" }, hovertemplate: "T = %{x:.0f} años: %{y:.1f} mm/h<extra>escenario</extra>" },
+      { x: [Ts[0], Ts[Ts.length - 1]], y: [capI, capI], name: "capacidad del DN 1 000", mode: "lines", line: { color: css("--ink"), width: 1.5, dash: "dot" }, hoverinfo: "name" },
+      { x: [TD, TD], y: [i0, i1], name: "T = 25 (diseño)", mode: "markers+lines", line: { color: css("--sw"), width: 2 }, marker: { size: 9, color: css("--sw") }, hovertemplate: "%{y:.1f} mm/h<extra>T = 25</extra>" }
+    ], base({ margin: { l: 58, r: 14, t: 16, b: 50 },
+      xaxis: Object.assign(base().xaxis, { type: "log", title: "periodo de retorno T (años)", tickvals: [2, 5, 10, 25, 50, 100, 200, 500] }),
+      yaxis: Object.assign(base().yaxis, { title: "intensidad en 102 min (mm/h)" }),
+      shapes: [{ type: "rect", xref: "x", yref: "paper", x0: 60, x1: 500, y0: 0, y1: 1, fillcolor: rgba(css("--muted"), 0.08), line: { width: 0 } }],
+      annotations: [{ x: Math.log10(170), y: 0.03, xref: "x", yref: "paper", text: "T > 2N = 60: extrapolación", showarrow: false, font: { size: 11, color: css("--muted") } }],
+      legend: { orientation: "h", y: 1.1, x: 0, font: { size: 12 } } }), CFG);
   }
 };
 const dibujados = new Set();

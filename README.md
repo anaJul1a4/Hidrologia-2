@@ -8,14 +8,19 @@ El Tambo (Perú), la misma de la [Tarea 1](https://anajul1a4.github.io/Hidrologi
 
 - la línea gráfica de la Tarea 1 (capa final del CSS de `index.html`) y los bloques «Qué muestra / Cómo se construyó»;
 - la diapositiva `t1-resumen` (la Tarea 1 como punto de partida);
-- la diapositiva `p1-balance` (balance diario del suelo, adaptado de la figura #s14 de las notas del curso).
+- la diapositiva `p1-balance` (balance diario del suelo, adaptado de la figura #s14 de las notas del curso);
+- diapositivas de conceptos (`t1-conceptos`, `p2-conceptos`), de las obras (`p24-obra`, `p24b-obra`),
+  la comparación con el Valle de Aburrá (`p2-aburra`) y los escenarios de cambio climático (`p25-clima`).
 
 ## Estructura
 
 ```
 index.html                      diapositivas (navegación con ← → o los puntos inferiores)
 assets/, img/                   Plotly e imágenes
-codigo/punto1/00_balance_cubeta.py
+codigo/punto1/00_balance_cubeta.py   balance diario del suelo (diapositiva p1-balance)
+codigo/punto2/10_geometria_obras.py  ortofoto, alcantarillas reales de OSM e hidráulica de las obras (requiere Pillow y pyproj)
+codigo/punto2/11_escenarios_clima.py escenarios de cambio climático sobre la IDF y la alcantarilla
+datos/punto2/                   ortofoto DOP20 (GeoBasis-DE/LGB, dl-de/by-2-0) y extracto de OpenStreetMap (ODbL)
 datos/punto1/                   entradas recortadas a la cuenca y al periodo (CAMELS-PE 1998–2016)
 datos/punto1/tarea1/            productos de la Tarea 1 que se reutilizan
 productos/punto1/               salidas: balance_cubeta_datos.js (lo lee index.html), CSV mensual y anual
@@ -24,7 +29,10 @@ productos/punto1/               salidas: balance_cubeta_datos.js (lo lee index.h
 ## Reproducir
 
 ```
-python codigo/punto1/00_balance_cubeta.py
+python codigo/punto1/00_balance_cubeta.py   balance diario del suelo (diapositiva p1-balance)
+codigo/punto2/10_geometria_obras.py  ortofoto, alcantarillas reales de OSM e hidráulica de las obras (requiere Pillow y pyproj)
+codigo/punto2/11_escenarios_clima.py escenarios de cambio climático sobre la IDF y la alcantarilla
+datos/punto2/                   ortofoto DOP20 (GeoBasis-DE/LGB, dl-de/by-2-0) y extracto de OpenStreetMap (ODbL)
 ```
 
 Solo usa la biblioteca estándar de Python 3. Si existe `datos/punto1/eto_era5land_diaria_cuenca.csv`
