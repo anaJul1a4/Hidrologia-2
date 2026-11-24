@@ -25,6 +25,9 @@ codigo/punto2/12_descarga_siata.py   descarga nivel (101) y lluvia (41) de SIATA
 codigo/punto2/13_cuencas_presidenta.py delimitación de La Presidenta con Copernicus GLO-30 y tiempos de concentración
 codigo/punto2/14_presidenta_respuesta.py crecidas, tiempos de subida y retardo, máximos anuales de lluvia
 codigo/punto2/15_presidenta_web.py   diseño con las reglas de EPM y datos de la diapositiva p2-presidenta
+codigo/informe/16_figuras_informe.py figuras estáticas del informe
+codigo/informe/17_esquemas_obras_png.py esquemas de las obras en PNG (Chrome o Edge sin interfaz)
+codigo/informe/18_informe.py         informe en PDF y Word (Informe_Tarea2_Chicama_Cottbus.*)
 datos/punto2/                   ortofoto DOP20 (GeoBasis-DE/LGB, dl-de/by-2-0) y extracto de OpenStreetMap (ODbL)
 datos/punto1/                   entradas recortadas a la cuenca y al periodo (CAMELS-PE 1998–2016)
 datos/punto1/tarea1/            productos de la Tarea 1 que se reutilizan
@@ -43,6 +46,9 @@ python codigo/punto2/12_descarga_siata.py
 python codigo/punto2/13_cuencas_presidenta.py
 python codigo/punto2/14_presidenta_respuesta.py
 python codigo/punto2/15_presidenta_web.py
+python codigo/informe/16_figuras_informe.py
+python codigo/informe/17_esquemas_obras_png.py
+python codigo/informe/18_informe.py
 ```
 
 Los scripts 00 y 11 solo usan la biblioteca estándar de Python 3; el 10 necesita Pillow y pyproj. Si existe `datos/punto1/eto_era5land_diaria_cuenca.csv`
