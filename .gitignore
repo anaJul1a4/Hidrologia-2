@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .cdsapirc
+datos/punto2/siata_crudo/
+datos/punto2/dem_crudo/

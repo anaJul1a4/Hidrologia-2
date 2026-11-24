@@ -10,7 +10,8 @@ El Tambo (Perú), la misma de la [Tarea 1](https://anajul1a4.github.io/Hidrologi
 - la diapositiva `t1-resumen` (la Tarea 1 como punto de partida);
 - la diapositiva `p1-balance` (balance diario del suelo, adaptado de la figura #s14 de las notas del curso);
 - diapositivas de conceptos (`t1-conceptos`, `p2-conceptos`), de las obras (`p24-obra`, `p24b-obra`),
-  la comparación con el Valle de Aburrá (`p2-aburra`) y los escenarios de cambio climático (`p25-clima`).
+  la comparación con el Valle de Aburrá (`p2-aburra`), la quebrada La Presidenta con datos de SIATA y la norma de EPM (`p2-presidenta`)
+  y los escenarios de cambio climático (`p25-clima`).
 
 ## Estructura
 
@@ -20,6 +21,10 @@ assets/, img/                   Plotly e imágenes
 codigo/punto1/00_balance_cubeta.py   balance diario del suelo (diapositiva p1-balance)
 codigo/punto2/10_geometria_obras.py  ortofoto, alcantarillas reales de OSM e hidráulica de las obras (requiere Pillow y pyproj)
 codigo/punto2/11_escenarios_clima.py escenarios de cambio climático sobre la IDF y la alcantarilla
+codigo/punto2/12_descarga_siata.py   descarga nivel (101) y lluvia (41) de SIATA a datos/punto2/siata_crudo/ (fuera de git, ≈ 480 MB)
+codigo/punto2/13_cuencas_presidenta.py delimitación de La Presidenta con Copernicus GLO-30 y tiempos de concentración
+codigo/punto2/14_presidenta_respuesta.py crecidas, tiempos de subida y retardo, máximos anuales de lluvia
+codigo/punto2/15_presidenta_web.py   diseño con las reglas de EPM y datos de la diapositiva p2-presidenta
 datos/punto2/                   ortofoto DOP20 (GeoBasis-DE/LGB, dl-de/by-2-0) y extracto de OpenStreetMap (ODbL)
 datos/punto1/                   entradas recortadas a la cuenca y al periodo (CAMELS-PE 1998–2016)
 datos/punto1/tarea1/            productos de la Tarea 1 que se reutilizan
@@ -33,6 +38,11 @@ pip install -r requirements.txt
 python codigo/punto1/00_balance_cubeta.py
 python codigo/punto2/10_geometria_obras.py
 python codigo/punto2/11_escenarios_clima.py
+python codigo/punto2/12_descarga_siata.py
+# DEM: copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N06_00_W076_00_DEM/... → datos/punto2/dem_crudo/
+python codigo/punto2/13_cuencas_presidenta.py
+python codigo/punto2/14_presidenta_respuesta.py
+python codigo/punto2/15_presidenta_web.py
 ```
 
 Los scripts 00 y 11 solo usan la biblioteca estándar de Python 3; el 10 necesita Pillow y pyproj. Si existe `datos/punto1/eto_era5land_diaria_cuenca.csv`
@@ -43,3 +53,5 @@ PISCOeo × 0,906.
 
 - CAMELS-PE, cuenca `PE_47E0A2A8`: `prec` (PISCOp v2.1), `pet` (PISCOeo_pm, termina en 2016-12) y `flow_obs` diarios.
 - IMERG V07 Final mensual promediado en la cuenca, y caudal mensual rellenado: Tarea 1 del grupo.
+- SIATA, datos abiertos (datos.siata.gov.co): estación de nivel 101 (doi:10.83041/JEO98W) y pluviómetro 41 (doi:10.83041/8E02OC).
+- Corantioquia (2023), reglamentación de usos de la quebrada La Presidenta (áreas, tabla 9); EPM (2025), norma GD-AS002 (IDF, C, t_c, T).

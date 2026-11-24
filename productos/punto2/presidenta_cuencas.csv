@@ -1,0 +1,4 @@
+cierre,lon,lat,area_km2,area_oficial_km2,L_cauce_m,S_cauce_m_m,z_cierre_m,z_max_m,z_media_m,tc_Kirpich_min,tc_Temez_min,tc_Bransby_Williams_min,tc_Giandotti_min
+parte_alta,-75.53587,6.20681,0.546,0.592728,1140,0.468,2233,2766,2600,5.9,23.0,20.6,18.3
+siata_101,-75.57004,6.20813,10.54,,5130,0.2472,1532,2802,2104,24.0,81.3,78.3,64.9
+salida,-75.57845,6.21111,11.242,13.382196,6210,0.211,1490,2802,2071,29.6,96.9,97.2,70.7

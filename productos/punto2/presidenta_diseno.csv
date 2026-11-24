@@ -1,0 +1,9 @@
+escenario,I,C,tc_FAA_min,estacion_IDF,T,i_mm_h,Q_m3_s,q_m3_s_km2,D_calc_m,DN_m,V_tubo_lleno_m_s,S0_para_V5_pct
+ladera con vegetación,0.3,0.405,21.4,Medellín,10,81.9,5.03,9.2,1.16,1.2,4.45,2.1
+ladera con vegetación,0.3,0.405,21.4,Medellín,25,93.8,5.76,10.6,1.22,1.4,3.74,1.71
+ladera con vegetación,0.3,0.405,21.4,Palmas,10,103.2,6.34,11.6,1.26,1.4,4.12,1.71
+ladera con vegetación,0.3,0.405,21.4,Palmas,25,121.4,7.46,13.7,1.34,1.4,4.84,1.71
+"urbanizada (residencial, zonas duras)",0.75,0.787,9.6,Medellín,10,110.1,13.15,24.1,1.66,1.8,5.17,1.23
+"urbanizada (residencial, zonas duras)",0.75,0.787,9.6,Medellín,25,126.4,15.09,27.6,1.75,1.8,5.93,1.23
+"urbanizada (residencial, zonas duras)",0.75,0.787,9.6,Palmas,10,138.5,16.55,30.3,1.81,2.0,5.27,1.06
+"urbanizada (residencial, zonas duras)",0.75,0.787,9.6,Palmas,25,163.7,19.55,35.8,1.93,2.0,6.22,1.06

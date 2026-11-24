@@ -493,6 +493,7 @@ h2{font-size:1.4rem;line-height:1.3;letter-spacing:0;margin:0 0 8px}
 </style>
 <script src="assets/plotly-2.35.2.min.js"></script>
 <script src="productos/punto1/balance_cubeta_datos.js"></script>
+<script src="productos/punto2/presidenta_datos.js"></script>
 </head><body>
 <div class="deck">
 <header class="top"><a class="back" href="https://anajul1a4.github.io/Hidrologia-Chicama-El-Tambo/">← Tarea 1</a>
@@ -1323,7 +1324,80 @@ casi no importa más allá de 3 h, porque la cola de lluvia débil sale por el o
 <i>volumen</i> y remanso; en una quebrada andina tropical falla por <i>energía</i>, obstrucción y arrastre. Por eso no se puede copiar el diseño de un sitio a otro, ni siquiera el periodo de retorno.</div>
 <p class='note'><b>Cómo se construyó:</b> comparación cualitativa del grupo. La columna de Cottbus sale de los resultados de este sitio. La de Aburrá describe rasgos conocidos del valle
 (régimen bimodal, laderas empinadas, quebradas urbanas) y un cálculo ilustrativo de Kirpich (t<sub>c</sub> = 0,0195 L<sup>0,77</sup> S<sup>−0,385</sup>), sin datos de una quebrada concreta.
-Para cifras hay que usar las redes de SIATA y los estudios del Área Metropolitana: <b>pendiente de verificar antes de la exposición</b>.</p>
+Las cifras medidas con SIATA, la IDF oficial de EPM y el diseño de la misma obra están en la diapositiva siguiente (quebrada La Presidenta).</p>
+</section>
+<section class='slide' id='p2-presidenta' data-g='a' data-sec='2 · Diseño hidrológico'>
+<p class='kicker'>Punto 2 · La misma obra en Medellín: quebrada La Presidenta</p>
+<h2>En El Poblado la quebrada responde en ≈ 25 minutos y la misma alcantarilla tendría que llevar 4–5 veces más agua</h2>
+<p class='intro'>La Presidenta drena 13,4 km² de la ladera oriental del valle hasta el río Medellín, está muy urbanizada, tiene 145 obras hidráulicas
+(canales, box culverts y puentes) y se desborda con frecuencia. SIATA mide su nivel y la lluvia cada minuto: con esos datos medimos lo que en Cottbus
+solo pudimos calcular, el tiempo de respuesta.</p>
+<div class='datos-clave'>
+<div class='dato'>Cuenca (Corantioquia)<b>13,38 km² (DEM: 11,2)</b></div><div class='dato'>A la estación SIATA 101<b>10,5 km², cauce 5,1 km, S = 25 %</b></div>
+<div class='dato'>Microcuenca comparable<b>parte alta, 0,55 km²</b></div><div class='dato'>Datos<b>nivel 2013–2026 · lluvia 11 años, 1 min</b></div>
+<div class='dato'>Crecidas analizadas<b>427 (≥ 40 cm)</b></div><div class='dato'>Tiempo de subida<b>mediana 27 min (25 en las ≥ 1,5 m)</b></div>
+</div>
+<div class='two even' style='gap:18px'>
+<article class='fig' style='margin:0'>
+<header class='fig-h'><h3>Crecidas reales medidas por SIATA (nivel y lluvia cada minuto)</h3><span class='tipo int'>interactiva</span></header>
+<div class='selector' role='group' aria-label='Crecida' id='pres-ev'><span class='sel-tit'>Crecida:</span></div>
+<div class='fig-cuerpo'><div id='g-pres-evento' class='plotb' style='min-height:340px'></div></div>
+</article>
+<article class='fig' style='margin:0'>
+<header class='fig-h'><h3>¿Qué fórmula de t<sub>c</sub> se parece a lo medido?</h3><span class='tipo int'>interactiva</span></header>
+<div class='fig-cuerpo'><div id='g-pres-tiempos' class='plotb' style='min-height:340px'></div></div>
+</article>
+</div>
+<div class='two even' style='gap:18px;margin-top:18px'>
+<article class='fig' style='margin:0'>
+<header class='fig-h'><h3>Lluvia de diseño: Cottbus, IDF oficial de EPM y lo medido por SIATA</h3><span class='tipo int'>interactiva</span></header>
+<div class='selector' role='group' aria-label='Duración' id='pres-dur'><span class='sel-tit'>Duración:</span>
+<button type='button' data-d='10' aria-pressed='true'>10 min</button><button type='button' data-d='30' aria-pressed='false'>30 min</button><button type='button' data-d='60' aria-pressed='false'>60 min</button></div>
+<div class='fig-cuerpo'><div id='g-pres-idf' class='plotb' style='min-height:330px'></div></div>
+</article>
+<article class='fig' style='margin:0'>
+<header class='fig-h'><h3>Cuencas delimitadas y estaciones</h3><span class='tipo int'>interactiva</span></header>
+<div class='fig-cuerpo'><div id='g-pres-mapa' class='plotb' style='min-height:370px'></div></div>
+</article>
+</div>
+<article class='fig' style='margin-top:18px'>
+<header class='fig-h'><h3>La misma obra en los dos sitios (método racional, T = 25 años)</h3><span class='tipo'>tabla</span></header>
+<div class='tw' style='padding:0 18px'><table class='tb'><thead><tr><th></th><th>Cottbus, prados</th><th>Cottbus, urbanizada</th><th>La Presidenta alta, ladera con vegetación</th><th>La Presidenta alta, urbanizada</th></tr></thead><tbody>
+<tr><td>Área</td><td>0,44 km²</td><td>0,44 km²</td><td>0,55 km²</td><td>0,55 km²</td></tr>
+<tr><td>Pendiente del cauce</td><td>0,07 %</td><td>0,07 %</td><td>47 %</td><td>47 %</td></tr>
+<tr><td>C</td><td>0,335</td><td>0,58</td><td>0,41 (EPM, I = 0,30)</td><td>0,79 (EPM, I = 0,75)</td></tr>
+<tr><td>t<sub>c</sub></td><td>102 min (Kirpich)</td><td>41 min</td><td>21 min (FAA, EPM)</td><td>10 min (FAA, EPM)</td></tr>
+<tr><td>i(t<sub>c</sub>, 25 años)</td><td>26,6 mm/h</td><td>53,9 mm/h</td><td>94 mm/h (IDF EPM Medellín)</td><td>126 mm/h</td></tr>
+<tr><td>Caudal pico</td><td><b>1,05 m³/s</b></td><td><b>3,79 m³/s</b></td><td><b>5,8 m³/s</b> (7,5 con IDF Palmas)</td><td><b>15,1 m³/s</b> (19,6 con Palmas)</td></tr>
+<tr><td>Caudal por km²</td><td>2,4 m³/s/km²</td><td>8,7</td><td>10,6</td><td>27,6</td></tr>
+<tr><td>Tubo</td><td>DN 1 000, S₀ 0,5 %, V 2,3 m/s</td><td>(tanque de 7 900 m³)</td><td>DN 1 400 con S₀ ≤ 1,7 % (V ≤ 5 m/s)</td><td>DN 1 800 con S₀ ≤ 1,2 %, o box culvert</td></tr>
+</tbody></table></div>
+<div class='fig-texto'>
+<div><h4>Qué muestra</h4>
+<p><b>La respuesta es rápida y está medida.</b> En 427 crecidas la quebrada sube en 27 min (mediana; 17–57 min el 50 % central) y el pico llega 23 min después del centro de
+masa de la lluvia. En las 13 crecidas mayores (≥ 1,5 m, incluida la del 17-03-2026 que reportó la prensa) sube en 25 min. De las fórmulas, la de <b>Kirpich (24 min)</b> es la que se
+acerca. Témez, Bransby-Williams y Giandotti (65–81 min) duplican o triplican lo medido. En Cottbus Kirpich daba 102 min, y no teníamos con qué contrastarlo.</p>
+<p><b>La lluvia corta es parecida; lo que cambia es la duración que importa.</b> A 10 min, Cottbus, EPM y SIATA dan casi lo mismo (≈ 125–130 mm/h para 25 años). Pero en una ladera
+de 47 % el t<sub>c</sub> es de 10–20 min y la intensidad de diseño se multiplica por 3,5–5. La IDF oficial de EPM queda a menos de 10 % de lo que mide SIATA a 350 m de la quebrada.</p>
+<p class='leer'><b>Para la obra:</b> con 4–5 veces más caudal por km² y pendientes fuertes, el problema ya no es el volumen sino la energía: la velocidad supera los 5 m/s que permite
+EPM, y hay que escalonar la obra con caídas o pasar a box culvert. Es lo que muestran las 66 box culverts de La Presidenta, muchas con capacidad para pocos años de retorno según el
+plan de manejo de 2005–2006.</p></div>
+<div><h4>Cómo se construyó</h4>
+<p><b>Cuencas:</b> Copernicus GLO-30 y D8 (pysheds), con el cierre ajustado al área oficial de Corantioquia (Tabla 9, 2023). El DEM es de superficie: en la zona urbana da 11,2 km² frente
+a 13,38 oficiales (−16 %). <b>Crecidas:</b> nivel de la estación 101 (calidad 1, media móvil de 10 min), picos con subida ≥ 40 cm sobre el mínimo de las 6 h previas, separados ≥ 6 h;
+inicio de la subida al 10 % del ascenso. Lluvia del pluviómetro 41 (balancín p1) en las 4 h previas. Retardo = pico − centroide de la lluvia.</p>
+<p><b>Lluvia:</b> máximos anuales con ventanas móviles; año válido con ≥ 80 % de minutos con calidad 1 (2012–2013 tienen otro código de calidad y quedan fuera). Puntos con posición
+de Gringorten. <b>Diseño:</b> reglas de la norma EPM GD-AS002: C = 0,15 + 0,85·I (tabla 6-3), t<sub>c</sub> con la ecuación de la FAA, IDF del anexo 6.1 (2025), Manning y V<sub>máx</sub> = 5 m/s.</p>
+<p class='leer'><b>Limitaciones.</b> SIATA publica nivel, no caudal: no hay caudales pico observados, solo tiempos. El pluviómetro está en la parte baja de una cuenca que sube hasta
+2 800 m. 11 años de lluvia: comparación, no una IDF para diseñar. La EPM pide T = 10 años para este tamaño de área (tabla 6-1); aquí se usa T = 25 para compararlo con Cottbus.</p></div>
+</div>
+<p class='meta'><span class='script'>codigo/punto2/12_descarga_siata.py</span> · <span class='script'>13_cuencas_presidenta.py</span> · <span class='script'>14_presidenta_respuesta.py</span> · <span class='script'>15_presidenta_web.py</span>
+· Productos: <a href='productos/punto2/presidenta_crecidas.csv' download>presidenta_crecidas.csv</a> · <a href='productos/punto2/presidenta_maximos_lluvia.csv' download>presidenta_maximos_lluvia.csv</a>
+· <a href='productos/punto2/presidenta_cuencas.csv' download>presidenta_cuencas.csv</a> · <a href='productos/punto2/presidenta_diseno.csv' download>presidenta_diseno.csv</a></p>
+<p class='meta' style='padding-top:0'><b>Fuentes:</b> SIATA, datos abiertos (estación 101, doi:10.83041/JEO98W; estación 41, doi:10.83041/8E02OC); Corantioquia (2023), reglamentación de usos de la quebrada La Presidenta, tabla 9;
+EPM (2025), GD-AS002 <i>Normas de diseño de sistemas de alcantarillado</i>, tablas 6-1 y 6-3, ec. 6-6 y 6-8, anexo 6.1; Área Metropolitana (2007), plan de manejo de la microcuenca La Presidenta,
+citado por El Colombiano; Kirpich (1940); Témez (1978); Giandotti (1934).</p>
+</article>
 </section>
 <section class='slide' id='p25-clima' data-g='a' data-sec='2 · Diseño hidrológico'>
 <p class='kicker'>Punto 2 · Cambio climático y adaptación</p>
@@ -1844,6 +1918,75 @@ const G = {
       shapes: [{ type: "rect", xref: "x", yref: "paper", x0: 60, x1: 500, y0: 0, y1: 1, fillcolor: rgba(css("--muted"), 0.08), line: { width: 0 } }],
       annotations: [{ x: Math.log10(170), y: 0.03, xref: "x", yref: "paper", text: "T > 2N = 60: extrapolación", showarrow: false, font: { size: 11, color: css("--muted") } }],
       legend: { orientation: "h", y: 1.1, x: 0, font: { size: 12 } } }), CFG);
+  },
+
+  /* ───── La Presidenta (Medellín): datos de productos/punto2/presidenta_datos.js ───── */
+  "p2-presidenta": () => {
+    const P = window.PRES, el = id => document.getElementById(id), sl = el("p2-presidenta");
+    if (!P) return;
+    if (!sl.dataset.ok) {
+      sl.dataset.ok = 1; P.ev = 0; P.dur = 10;
+      const box = el("pres-ev");
+      P.eventos.forEach((e, k) => { const b = document.createElement("button"); b.type = "button"; b.dataset.ev = k;
+        b.textContent = e.pico.slice(0, 10); b.setAttribute("aria-pressed", k === 0); box.appendChild(b); });
+      box.addEventListener("click", ev => { const b = ev.target.closest("[data-ev]"); if (!b) return; P.ev = +b.dataset.ev;
+        box.querySelectorAll("[data-ev]").forEach(x => x.setAttribute("aria-pressed", x === b)); G["p2-presidenta"](); });
+      el("pres-dur").addEventListener("click", ev => { const b = ev.target.closest("[data-d]"); if (!b) return; P.dur = +b.dataset.d;
+        el("pres-dur").querySelectorAll("[data-d]").forEach(x => x.setAttribute("aria-pressed", x === b)); G["p2-presidenta"](); });
+    }
+    const azul = css("--vPL"), verde = css("--vQ"), ink = css("--ink"), mu = css("--muted"), roja = css("--neg"), ocre = css("--vE");
+    // 1 · crecida seleccionada
+    const e = P.eventos[P.ev], hh = e.min.map(m => m / 60);
+    Plotly.react("g-pres-evento", [
+      { type: "bar", x: hh, y: e.lluvia.map(v => v === null ? null : v * 60), name: "lluvia (mm/h, cada min)", yaxis: "y2", marker: { color: rgba(azul, 0.6) }, hovertemplate: "%{x:.2f} h: %{y:.0f} mm/h<extra></extra>" },
+      { x: hh, y: e.nivel, name: "nivel (cm)", mode: "lines", line: { color: verde, width: 2.5 }, hovertemplate: "%{x:.2f} h: %{y:.0f} cm<extra></extra>" }
+    ], base({ margin: { l: 52, r: 52, t: 14, b: 44 }, bargap: 0,
+      xaxis: Object.assign(base().xaxis, { title: "horas respecto al pico", range: [-2.5, 2.5] }),
+      yaxis: Object.assign(base().yaxis, { title: "nivel (cm)" }),
+      yaxis2: Object.assign(base().yaxis, { title: "lluvia (mm/h)", overlaying: "y", side: "right", autorange: "reversed", showgrid: false }),
+      shapes: [{ type: "line", x0: 0, x1: 0, yref: "paper", y0: 0, y1: 1, line: { color: mu, dash: "dot", width: 1 } }],
+      legend: { orientation: "h", y: 1.12, x: 0, font: { size: 12 } } }), CFG);
+    // 2 · tiempos medidos frente a fórmulas
+    const c = P.crecidas, big = c.subida_cm.map(v => v >= 100);
+    const tc = P.resumen.tc_101_min, nom = { Kirpich: "Kirpich", Temez: "Témez", Bransby_Williams: "Bransby-Williams", Giandotti: "Giandotti" };
+    const lineas = Object.entries(tc).map(([k, v]) => ({ type: "line", x0: v, x1: v, yref: "paper", y0: 0, y1: 1, line: { color: k === "Kirpich" ? roja : mu, width: k === "Kirpich" ? 2.5 : 1.5, dash: "dash" } }));
+    const notas = Object.entries(tc).map(([k, v], j) => ({ x: v, y: 1 - 0.07 * j, xref: "x", yref: "paper", text: `${nom[k] || k} ${Math.round(v)} min`, showarrow: false, xanchor: "left", font: { size: 11, color: k === "Kirpich" ? roja : mu } }));
+    Plotly.react("g-pres-tiempos", [
+      { type: "histogram", x: c.t_subida, name: "tiempo de subida, todas (427)", xbins: { start: 0, end: 180, size: 5 }, marker: { color: rgba(verde, 0.45) }, histnorm: "probability" },
+      { type: "histogram", x: c.t_subida.filter((_, i) => big[i]), name: "tiempo de subida, ≥ 1 m", xbins: { start: 0, end: 180, size: 5 }, marker: { color: rgba(azul, 0.6) }, histnorm: "probability" }
+    ], base({ barmode: "overlay", margin: { l: 52, r: 14, t: 14, b: 44 },
+      xaxis: Object.assign(base().xaxis, { title: "minutos", range: [0, 130] }), yaxis: Object.assign(base().yaxis, { title: "fracción de crecidas" }),
+      shapes: lineas, annotations: notas, legend: { orientation: "h", y: 1.12, x: 0, font: { size: 12 } } }), CFG);
+    // 3 · IDF
+    const d = P.dur / 60, Ts = []; for (let k = 0; k <= 40; k++) Ts.push(Math.pow(10, Math.log10(2) + k * (2 - Math.log10(2)) / 40));
+    const MU = 19.42, SG = 7.52, XI = 0.044, cott = T => (MU + SG * (Math.pow(-Math.log(1 - 1 / T), -XI) - 1) / XI) / Math.pow(d + 0.137, 0.872);
+    const epm = (est) => { const t = P.idf[est], TT = Object.keys(t).map(Number); return { x: TT, y: TT.map(T => t[String(T)][0] / Math.pow(0.4 + d, t[String(T)][1])) }; };
+    const mx = P.maximos.map(r => r[`i_${P.dur}min_mm_h`]).filter(v => v !== null).sort((a, b) => b - a), n = mx.length;
+    const Tg = mx.map((_, m) => (n + 0.12) / (m + 1 - 0.44));
+    const em = epm("Medellín"), ep = epm("Palmas");
+    Plotly.react("g-pres-idf", [
+      { x: Ts, y: Ts.map(cott), name: "Cottbus (IDF de 2.3)", mode: "lines", line: { color: ocre, width: 2.5 }, hovertemplate: "T %{x:.0f}: %{y:.0f} mm/h<extra>Cottbus</extra>" },
+      { x: em.x, y: em.y, name: "EPM · Medellín", mode: "lines+markers", line: { color: azul, width: 2.5 }, hovertemplate: "T %{x}: %{y:.0f} mm/h<extra>EPM Medellín</extra>" },
+      { x: ep.x, y: ep.y, name: "EPM · Palmas (2 550 m)", mode: "lines+markers", line: { color: azul, width: 1.5, dash: "dash" }, hovertemplate: "T %{x}: %{y:.0f} mm/h<extra>EPM Palmas</extra>" },
+      { x: Tg, y: mx, name: `SIATA 41 (${n} años, Gringorten)`, mode: "markers", marker: { color: ink, size: 8, symbol: "circle-open", line: { width: 2 } }, hovertemplate: "T %{x:.1f}: %{y:.0f} mm/h<extra>SIATA 41</extra>" }
+    ], base({ margin: { l: 56, r: 14, t: 14, b: 48 },
+      xaxis: Object.assign(base().xaxis, { type: "log", title: "periodo de retorno T (años)", tickvals: [2, 5, 10, 25, 50, 100] }),
+      yaxis: Object.assign(base().yaxis, { title: `intensidad en ${P.dur} min (mm/h)` }), legend: { orientation: "h", y: 1.14, x: 0, font: { size: 12 } } }), CFG);
+    // 4 · mapa simple (lon/lat)
+    const tr = [], col = { salida: mu, siata_101: verde, parte_alta: roja }, et = { salida: "salida al río Medellín", siata_101: "cuenca a la estación 101", parte_alta: "parte alta (microcuenca)" };
+    const orden = { salida: 0, siata_101: 1, parte_alta: 2 };
+    [...P.geo.features].sort((f1, f2) => orden[f1.properties.cierre] - orden[f2.properties.cierre]).forEach(f => {
+      const polys = f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.coordinates;
+      polys.forEach((pg, j) => tr.push({ x: pg[0].map(q => q[0]), y: pg[0].map(q => q[1]), mode: "lines", fill: f.properties.cierre === "parte_alta" ? "toself" : "none",
+        fillcolor: rgba(col[f.properties.cierre], 0.25), line: { color: col[f.properties.cierre], width: f.properties.cierre === "salida" ? 1.5 : 2.5, dash: f.properties.cierre === "salida" ? "dot" : "solid" }, name: `${et[f.properties.cierre]} (${f.properties.area_km2.toFixed(2).replace(".", ",")} km²)`,
+        showlegend: j === 0, hoverinfo: "name" }));
+    });
+    const est = P.estaciones.slice(0, 2);   // las estaciones IDF de EPM (5–6 km) quedan fuera del encuadre; se citan en el texto
+    tr.push({ x: est.map(s2 => s2.lon), y: est.map(s2 => s2.lat), text: est.map(s2 => s2.n), mode: "markers+text", textposition: ["top left", "bottom right"],
+      marker: { size: 10, color: [verde, azul], symbol: ["triangle-up", "circle"] }, textfont: { size: 11 }, name: "estaciones", showlegend: false, hoverinfo: "text" });
+    Plotly.react("g-pres-mapa", tr, base({ margin: { l: 52, r: 10, t: 10, b: 40 },
+      xaxis: Object.assign(base().xaxis, { title: "longitud (°)", range: [-75.585, -75.515] }), yaxis: Object.assign(base().yaxis, { title: "latitud (°)", scaleanchor: "x", scaleratio: 1, range: [6.175, 6.235] }),
+      legend: { orientation: "h", y: -0.18, x: 0, font: { size: 11 } } }), CFG);
   }
 };
 const dibujados = new Set();
