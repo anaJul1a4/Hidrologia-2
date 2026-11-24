@@ -1069,7 +1069,97 @@ supere al menos una vez en 30 años.</p>
 <div class='tw'><table class='tb'><thead><tr><th>Fuente</th><th>D calculado</th><th>Rango</th></tr></thead><tbody><tr><td>tc (4 fórmulas)</td><td>0,63–0,87 m</td><td>29 %</td></tr><tr><td>IC 95 % de la IDF</td><td>0,71–0,91 m</td><td>25 %</td></tr><tr><td>C ± 20 %</td><td>0,77–0,90 m</td><td>15 %</td></tr><tr><td>distribución</td><td>0,82–0,83 m</td><td>1 %</td></tr></tbody></table></div>
 <p><b>Lectura:</b> la fórmula de tc mueve más el resultado que la propia lluvia. En un terreno de 1,4 m de desnivel en 1,85 km, el agua corre despacio y cada fórmula la
 imagina distinta. Le sigue el intervalo de confianza de la IDF (30 años de datos) y después C. La elección de la distribución casi no cambia nada (1 %): a T = 25 todas
-interpolan, no extrapolan (2.2). Solo el retardo del SCS, C − 20 % y el límite inferior de la IDF bajarían a DN 0,80 m.</p></div></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> La intensidad de diseño (≈ 27 mm/h durante 1,7 h) es la de una tormenta convectiva organizada de verano: necesita una atmósfera inestable en toda la troposfera. Un chubasco aislado de 10–20 min es más intenso, pero aquí no llega a llenar el tubo porque el agua tarda ≈ 100 min en recorrer la cuenca. Si la capa límite está estable (inversión nocturna o invierno), la lluvia es estratiforme y débil: no dimensiona nada. Un tc largo hace que la alcantarilla «vea» tormentas largas, y por eso el tc pesa tanto en el diámetro.</div><p class='note'><b>Fuentes:</b> guía 2.4; Chow et al. (1988), §15.1 y tabla 15.1.1 (C para zonas planas, según T), tabla 13.1.1 (periodos de diseño); Kirpich (1940); Témez (1978); NRCS (1986), TR-55; NERC (1975), Flood Studies Report (reducción areal); Manning a tubo lleno, concreto n = 0,013. Script <code>codigo/punto2/07_problema_A.py</code>.</p></section><section class='slide' id='p24-riesgo' data-g='a' data-sec='2 · Diseño hidrológico'><p class='kicker k-arch'>Punto 2 · 2.4 · Problema A</p><h2>Riesgo efectivo y escala: el tubo real falla mucho menos que lo nominal</h2>
+interpolan, no extrapolan (2.2). Solo el retardo del SCS, C − 20 % y el límite inferior de la IDF bajarían a DN 0,80 m.</p></div></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> La intensidad de diseño (≈ 27 mm/h durante 1,7 h) es la de una tormenta convectiva organizada de verano: necesita una atmósfera inestable en toda la troposfera. Un chubasco aislado de 10–20 min es más intenso, pero aquí no llega a llenar el tubo porque el agua tarda ≈ 100 min en recorrer la cuenca. Si la capa límite está estable (inversión nocturna o invierno), la lluvia es estratiforme y débil: no dimensiona nada. Un tc largo hace que la alcantarilla «vea» tormentas largas, y por eso el tc pesa tanto en el diámetro.</div><p class='note'><b>Fuentes:</b> guía 2.4; Chow et al. (1988), §15.1 y tabla 15.1.1 (C para zonas planas, según T), tabla 13.1.1 (periodos de diseño); Kirpich (1940); Témez (1978); NRCS (1986), TR-55; NERC (1975), Flood Studies Report (reducción areal); Manning a tubo lleno, concreto n = 0,013. Script <code>codigo/punto2/07_problema_A.py</code>.</p></section>
+
+<section class='slide' id='p24-obra' data-g='a' data-sec='2 · Diseño hidrológico'>
+<p class='kicker'>Punto 2 · 2.4 · Problema A · La obra</p>
+<h2>La alcantarilla: un tubo de concreto DN 1 000 de 12 m bajo un camino rural</h2>
+<p class='intro'>Así se ve lo que dimensionamos: la geometría del tubo, del terraplén y del flujo con el caudal de diseño (Q<sub>p</sub> = 1,05 m³/s, T = 25 años),
+y el sitio real donde iría.</p>
+<div class='datos-clave'>
+<div class='dato'>Diámetro<b>DN 1 000 (calc. 0,84 m)</b></div><div class='dato'>Longitud<b>12 m</b></div><div class='dato'>Pendiente S₀<b>0,5 % (Δz = 6 cm)</b></div>
+<div class='dato'>Capacidad a tubo lleno<b>1,70 m³/s</b></div><div class='dato'>Tirante con Q<sub>p</sub><b>0,57 m (y/D = 0,57)</b></div>
+<div class='dato'>Velocidad<b>2,27 m/s</b></div><div class='dato'>Froude<b>1,06 ≈ crítico</b></div>
+</div>
+<article class='fig'>
+<header class='fig-h'><h3>Perfil longitudinal y sección transversal con el caudal de diseño</h3><span class='tipo'>esquema 2D</span></header>
+<div class='fig-cuerpo' style='display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1fr);gap:12px;align-items:center'>
+<svg viewBox='0 0 1000 340' role='img' aria-label='Perfil longitudinal de la alcantarilla bajo el terraplén del camino'>
+<defs><marker id='flecha' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--acc)'/></marker></defs>
+<line x1='10' y1='286' x2='150' y2='286' stroke='var(--axis)' stroke-width='2'/><line x1='846' y1='289.5' x2='990' y2='290' stroke='var(--axis)' stroke-width='2'/>
+<polygon points='185,286 382,187 614,187 811,289' fill='color-mix(in srgb,var(--sw) 22%,var(--card))' stroke='var(--sw)' stroke-width='1.5'/>
+<line x1='382' y1='185' x2='614' y2='185' stroke='var(--ink)' stroke-width='5'/>
+<polygon points='150,222 846,225.5 846,295.5 150,292' fill='var(--card)'/>
+<polygon points='150,253 846,256.5 846,289.5 150,286' fill='color-mix(in srgb,var(--vPL) 40%,transparent)'/>
+<line x1='150' y1='222' x2='846' y2='225.5' stroke='var(--ink2)' stroke-width='2'/><line x1='150' y1='286' x2='846' y2='289.5' stroke='var(--ink2)' stroke-width='2'/>
+<line x1='150' y1='216' x2='846' y2='219.5' stroke='var(--ink2)' stroke-width='1' stroke-dasharray='4 3'/><line x1='150' y1='292' x2='846' y2='295.5' stroke='var(--ink2)' stroke-width='1' stroke-dasharray='4 3'/>
+<line x1='150' y1='251.8' x2='846' y2='255.3' stroke='var(--vPL)' stroke-width='1.2' stroke-dasharray='6 4'/>
+<rect x='136' y='200' width='14' height='96' fill='var(--muted)'/><rect x='846' y='203' width='14' height='96' fill='var(--muted)'/>
+<line x1='30' y1='270' x2='120' y2='270' stroke='var(--acc)' stroke-width='2.5' marker-end='url(#flecha)'/>
+<g fill='var(--muted)'><circle cx='875' cy='292' r='5'/><circle cx='893' cy='293' r='6'/><circle cx='912' cy='292' r='5'/><circle cx='930' cy='293' r='6'/><circle cx='948' cy='292' r='5'/><circle cx='884' cy='300' r='5'/><circle cx='903' cy='301' r='5'/><circle cx='921' cy='300' r='6'/><circle cx='940' cy='301' r='5'/></g>
+<line x1='150' y1='322' x2='846' y2='322' stroke='var(--ink2)'/><line x1='150' y1='314' x2='150' y2='330' stroke='var(--ink2)'/><line x1='846' y1='314' x2='846' y2='330' stroke='var(--ink2)'/>
+<text x='498' y='336' text-anchor='middle' font-size='14'>L = 12 m · S₀ = 0,5 % → la salida queda 6 cm más baja</text>
+<text x='498' y='172' text-anchor='middle' font-size='14'>camino rural: corona 4 m, terraplén con taludes 1V:2H</text>
+<line x1='630' y1='187' x2='630' y2='219' stroke='var(--ink2)'/><text x='638' y='207' font-size='13' class='mut'>recubrimiento 0,6 m</text>
+<text x='250' y='243' font-size='13'>tubo de concreto DN 1 000, n = 0,013</text>
+<text x='250' y='273' font-size='13' fill='var(--vPL)'>agua: y = 0,57 m, V = 2,27 m/s</text>
+<text x='560' y='249' font-size='12' fill='var(--vPL)'>y_c = 0,59 m (- - -)</text>
+<text x='20' y='258' font-size='13' class='mut'>zanja (entrada)</text>
+<text x='92' y='196' font-size='12' class='mut'>muro de cabecera</text>
+<text x='868' y='278' font-size='12' class='mut'>enrocado</text>
+<text x='20' y='26' font-size='12' class='mut'>Escala 1:1 en horizontal y vertical (58 px por metro)</text>
+</svg>
+<svg viewBox='0 0 360 360' role='img' aria-label='Sección transversal del tubo con el tirante del caudal de diseño'>
+<circle cx='180' cy='175' r='143' fill='var(--well)' stroke='var(--ink2)' stroke-width='1.5'/>
+<circle cx='180' cy='175' r='130' fill='var(--card)' stroke='var(--ink2)' stroke-width='2'/>
+<path d='M 51.2 157.1 A 130 130 0 1 0 308.8 157.1 Z' fill='color-mix(in srgb,var(--vPL) 40%,transparent)' stroke='var(--vPL)' stroke-width='2'/>
+<line x1='52' y1='152.1' x2='308' y2='152.1' stroke='var(--vPL)' stroke-dasharray='6 4'/>
+<line x1='330' y1='305' x2='330' y2='157' stroke='var(--ink2)'/><line x1='322' y1='305' x2='338' y2='305' stroke='var(--ink2)'/><line x1='322' y1='157' x2='338' y2='157' stroke='var(--ink2)'/>
+<text x='300' y='285' text-anchor='end' font-size='14' fill='var(--vPL)'>y = 0,57 m</text>
+<line x1='50' y1='26' x2='310' y2='26' stroke='var(--ink2)'/><text x='180' y='18' text-anchor='middle' font-size='14'>D = 1,00 m (pared 0,10 m)</text>
+<text x='180' y='240' text-anchor='middle' font-size='14' fill='var(--vPL)'>A = 0,46 m² · T = 0,99 m</text>
+<text x='180' y='112' text-anchor='middle' font-size='13' class='mut'>libre: 43 % de la altura</text>
+<text x='180' y='348' text-anchor='middle' font-size='12' class='mut'>sección en el centro del tubo</text>
+</svg>
+</div>
+<div class='fig-texto'>
+<div><h4>Qué muestra</h4>
+<p>Con el caudal de diseño el tubo va a poco más de media sección (0,57 m de 1,00 m) a 2,3 m/s. El tirante normal (0,57 m) queda casi igual al crítico (0,59 m):
+<b>Fr ≈ 1,06</b>. La pendiente crítica para ese caudal es 0,45 % y la del tubo es 0,5 %, así que el flujo queda apenas supercrítico. Cerca de Fr = 1 la superficie
+del agua es ondulada e inestable, y un pequeño cambio de rugosidad o de pendiente cambia el régimen.</p>
+<p class='leer'><b>Sugerencia para decidir:</b> con S₀ = 0,4 % el flujo queda subcrítico y la capacidad sigue sobrando (1,52 m³/s, factor de seguridad 1,45).
+Además conviene un enrocado a la salida, porque 2,3 m/s erosiona una zanja de suelo arenoso.</p></div>
+<div><h4>Cómo se construyó</h4>
+<p>D, n, S₀ y Q<sub>p</sub> son los del diseño del problema A. Tirantes por Manning en sección circular parcialmente llena: A = D²(θ − sen θ)/8, P = θD/2, T = D·sen(θ/2).
+y<sub>c</sub> sale de Q²T/(gA³) = 1. La longitud de 12 m es la mediana de las 87 alcantarillas reales a menos de 1,5 km
+(OSM: mediana 11,6 m, Q1–Q3 de 9 a 15 m). Corona de 4 m, taludes 1V:2H y recubrimiento de 0,6 m son supuestos típicos de un camino rural y deben justificarse.
+No se calculó el control a la entrada (carga aguas arriba, HDS-5): es el siguiente paso.</p></div>
+</div>
+<p class='meta'><span class='script'>codigo/punto2/10_geometria_obras.py</span> · Productos: <a href='productos/punto2/hidraulica_obras.csv' download>hidraulica_obras.csv</a> · <a href='productos/punto2/alcantarillas_osm.csv' download>alcantarillas_osm.csv</a></p>
+</article>
+<div class='two even' style='gap:18px'>
+<article class='fig' style='margin:0'>
+<header class='fig-h'><h3>Modelo 3D de la alcantarilla (escala vertical × 3)</h3><span class='tipo int'>interactiva</span></header>
+<div class='fig-cuerpo'><div id='g-obraA' class='plotb' style='min-height:420px'></div></div>
+<p class='meta'>Arrastre para girar. Terraplén semitransparente; agua con el tirante del caudal de diseño.</p>
+</article>
+<article class='fig' style='margin:0'>
+<header class='fig-h'><h3>El sitio real: ortofoto del cierre de la microcuenca</h3><span class='tipo'>imagen</span></header>
+<div class='fig-cuerpo'><img src='img/p2_orto_cierre.webp' alt='Ortofoto de 520 por 520 metros alrededor del cierre de la microcuenca con zanjas, caminos y alcantarillas' loading='lazy'></div>
+<div class='legend' style='padding:0 18px'><span><i style='background:#2a8cff'></i>zanjas</span><span><i style='background:#ffcd32'></i>caminos</span><span><i style='background:#eb2828'></i>alcantarilla real (11,6 m)</span><span><i style='background:#fff;border:2px solid #888'></i>cierre de la microcuenca</span></div>
+<div class='fig-texto'>
+<div><h4>Qué muestra</h4><p>520 × 520 m alrededor del cierre (14,2950° E, 51,8391° N). La zanja sale al suroeste hacia otra zanja que corre junto a un camino de pasto.
+La alcantarilla cartografiada más cercana está a 249 m, bajo un camino asfaltado: 11,6 m de largo, como la que diseñamos.</p></div>
+<div><h4>Para revisar</h4><p class='leer'>El cierre queda en el borde de un <b>estanque con bosque</b>. Un estanque almacena agua y amortigua el pico, y el método racional
+no lo considera. Hay que confirmar en el DGM1 si el estanque está dentro de la microcuenca y si el cierre debe moverse al cruce con el camino.</p></div>
+</div>
+<p class='meta'>Ortofoto DOP20 © GeoBasis-DE/LGB, dl-de/by-2-0, vía Wikimedia Commons (dop 33451-5743) · zanjas, caminos y alcantarillas © colaboradores de OpenStreetMap, ODbL ·
+<a href='datos/punto2/osm_overpass_cierre_r1500m.json' download>osm_overpass_cierre_r1500m.json</a></p>
+</article>
+</div>
+<p class='note'><b>Fuentes:</b> Chow et al. (1988), §15.1; Chow (1959), <i>Open-Channel Hydraulics</i>, cap. 3 (energía específica y flujo crítico) y cap. 5 (Manning);
+FHWA (2012), HDS-5 <i>Hydraulic Design of Highway Culverts</i> (control a la entrada, pendiente); diseño del problema A (diapositiva anterior).</p>
+</section><section class='slide' id='p24-riesgo' data-g='a' data-sec='2 · Diseño hidrológico'><p class='kicker k-arch'>Punto 2 · 2.4 · Problema A</p><h2>Riesgo efectivo y escala: el tubo real falla mucho menos que lo nominal</h2>
 <div class='two even'><div class='panel'><a href='img/problemaA_mc.webp' target='_blank' rel='noopener' title='Abrir en tamaño completo'><img class='figimg' src='img/problemaA_mc.webp' width='1300' height='800' alt='Monte Carlo de la probabilidad de falla' loading='lazy'></a>
 <p class='note'>Cada iteración toma una réplica bootstrap de la IDF, un tc (triangular entre 88 y 258 min, moda en Kirpich), C ± 20 %, n de 0,011 a 0,015 y S₀ de 0,4 a
 0,6 %, y calcula la probabilidad anual de que la lluvia supere la capacidad del DN 1,00 m.</p></div>
@@ -1098,7 +1188,70 @@ aproximado de Chow, sin tránsito, da 7 000 m³.</p>
 <i>todas</i> las duraciones, de 10 min a 6 h: lleva 14 100 m³ de escorrentía, contra 10 300 m³ del
 trapecio crítico. <b>Recomendación:</b> V ≈ 7 900 m³, A<sub>s</sub> ≈ 5 200 m² (≈ 72 × 72 m, el 1,2 % de la cuenca) y orificio de 65 cm.</p>
 <p class='note'><b>Verificación:</b> antes de urbanizar, el mismo hietograma con tiempo–área da 1,080 m³/s, igual al pico del racional.
-La profundidad no cambia el volumen: con un orificio, O = O<sub>máx</sub>·√(S/V) para cualquier h<sub>máx</sub>, y solo cambian el área y el orificio.</p></div></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> Urbanizar cambia también el aire: el asfalto y los techos guardan calor y lo devuelven por la tarde (isla de calor). Eso refuerza la inestabilidad de la capa límite sobre la zona urbana y puede disparar o intensificar la convección, justo el tipo de lluvia que llena el tanque. De noche, la superficie urbana se enfría menos y la inversión nocturna es más débil que sobre los prados. El diseño usa la IDF actual: no incluye ese efecto ni el calentamiento (bono 2.5.3).</div><p class='note'><b>Fuentes:</b> guía 2.4, problema B; Chow et al. (1988), §15.4 (detención, racional modificado), §8.2 (tránsito de piscina nivelada por indicación de almacenamiento), tabla 15.1.1 (C urbano) y tabla 15.1.2 (ajuste de Kirpich × 0,4 para superficies de asfalto o concreto); Kuiry y Sen (2021), cap. 3 (orificio). Script <code>codigo/punto2/08_problema_B.py</code>.</p></section><section class='slide' id='p24b-pico' data-g='a' data-sec='2 · Diseño hidrológico'><p class='kicker k-arch'>Punto 2 · 2.4 · Problema B</p><h2>¿Por qué importa dónde cae el pico de la lluvia?</h2>
+La profundidad no cambia el volumen: con un orificio, O = O<sub>máx</sub>·√(S/V) para cualquier h<sub>máx</sub>, y solo cambian el área y el orificio.</p></div></div></div><div class='callout violet'><b>Estabilidad e inversión.</b> Urbanizar cambia también el aire: el asfalto y los techos guardan calor y lo devuelven por la tarde (isla de calor). Eso refuerza la inestabilidad de la capa límite sobre la zona urbana y puede disparar o intensificar la convección, justo el tipo de lluvia que llena el tanque. De noche, la superficie urbana se enfría menos y la inversión nocturna es más débil que sobre los prados. El diseño usa la IDF actual: no incluye ese efecto ni el calentamiento (bono 2.5.3).</div><p class='note'><b>Fuentes:</b> guía 2.4, problema B; Chow et al. (1988), §15.4 (detención, racional modificado), §8.2 (tránsito de piscina nivelada por indicación de almacenamiento), tabla 15.1.1 (C urbano) y tabla 15.1.2 (ajuste de Kirpich × 0,4 para superficies de asfalto o concreto); Kuiry y Sen (2021), cap. 3 (orificio). Script <code>codigo/punto2/08_problema_B.py</code>.</p></section>
+
+<section class='slide' id='p24b-obra' data-g='a' data-sec='2 · Diseño hidrológico'>
+<p class='kicker'>Punto 2 · 2.4 · Problema B · La obra</p>
+<h2>El tanque de detención: 72 × 72 m y 1,5 m de agua, con un orificio de 65 cm que deja salir el caudal de antes</h2>
+<p class='intro'>El tanque recibe el pico urbanizado (3,79 m³/s) y lo entrega por un orificio dimensionado para que, lleno, salga el caudal de los prados
+(1,08 m³/s). Ocupa ≈ 3/4 de una cancha de fútbol (105 × 68 m).</p>
+<div class='datos-clave'>
+<div class='dato'>Volumen<b>≈ 7 900 m³</b></div><div class='dato'>Área en planta<b>≈ 5 270 m² (72,6 × 72,6 m)</b></div>
+<div class='dato'>Lámina máxima<b>1,5 m + 0,3 m libre</b></div><div class='dato'>Orificio<b>Ø 0,65 m, C<sub>d</sub> = 0,6</b></div>
+<div class='dato'>Salida máxima<b>1,08 m³/s = Q previo</b></div><div class='dato'>Vaciado sin entrada<b>≈ 4,1 h</b></div>
+<div class='dato'>Vertedero de excedencias<b>≈ 13,6 m (propuesta)</b></div>
+</div>
+<article class='fig'>
+<header class='fig-h'><h3>Corte del tanque y funcionamiento hidráulico</h3><span class='tipo'>esquema 2D</span></header>
+<div class='fig-cuerpo'>
+<svg viewBox='0 0 1000 330' role='img' aria-label='Corte del tanque de detención con entrada, orificio de salida y vertedero de excedencias'>
+<defs><marker id='flechaB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='var(--acc)'/></marker></defs>
+<rect x='150' y='135' width='700' height='125' fill='color-mix(in srgb,var(--vPL) 30%,transparent)'/>
+<line x1='150' y1='135' x2='850' y2='135' stroke='var(--vPL)' stroke-width='2'/>
+<polyline points='140,100 140,270 860,270 860,206' fill='none' stroke='var(--ink2)' stroke-width='10'/>
+<line x1='860' y1='160' x2='860' y2='135' stroke='var(--ink2)' stroke-width='10'/>
+<rect x='862' y='206' width='120' height='54' fill='color-mix(in srgb,var(--vPL) 30%,transparent)' stroke='var(--ink2)'/>
+<line x1='870' y1='233' x2='975' y2='233' stroke='var(--acc)' stroke-width='2.5' marker-end='url(#flechaB)'/>
+<line x1='870' y1='120' x2='960' y2='120' stroke='var(--sw)' stroke-width='2.5' stroke-dasharray='6 4' marker-end='url(#flechaB)'/>
+<rect x='20' y='95' width='120' height='34' fill='var(--well)' stroke='var(--ink2)'/>
+<line x1='30' y1='112' x2='175' y2='112' stroke='var(--acc)' stroke-width='2.5' marker-end='url(#flechaB)'/>
+<line x1='110' y1='135' x2='110' y2='260' stroke='var(--ink2)'/><line x1='102' y1='135' x2='118' y2='135' stroke='var(--ink2)'/><line x1='102' y1='260' x2='118' y2='260' stroke='var(--ink2)'/>
+<text x='104' y='202' text-anchor='end' font-size='14'>h_máx = 1,5 m</text>
+<line x1='110' y1='100' x2='110' y2='135' stroke='var(--muted)'/><text x='160' y='126' font-size='12' class='mut'>borde libre 0,3 m</text>
+<text x='20' y='60' font-size='13'>entrada desde la red urbana</text><text x='20' y='80' font-size='13' fill='var(--acc)'>pico 3,79 m³/s</text>
+<text x='500' y='200' text-anchor='middle' font-size='15'>V ≈ 7 900 m³ · A_s ≈ 5 270 m²</text>
+<text x='500' y='222' text-anchor='middle' font-size='13' class='mut'>paredes verticales: S = A_s · h</text>
+<text x='880' y='254' font-size='12'>orificio Ø 0,65 m</text><text x='995' y='290' text-anchor='end' font-size='13' fill='var(--acc)'>O = C_d A_o √(2gh)</text><text x='995' y='308' text-anchor='end' font-size='13' fill='var(--acc)'>≤ 1,08 m³/s → zanja</text>
+<text x='995' y='92' text-anchor='end' font-size='12' fill='var(--sw)'>vertedero de excedencias</text><text x='995' y='76' text-anchor='end' font-size='12' fill='var(--sw)'>(cresta a 1,5 m, propuesta)</text>
+<line x1='150' y1='300' x2='850' y2='300' stroke='var(--ink2)'/><line x1='150' y1='292' x2='150' y2='308' stroke='var(--ink2)'/><line x1='850' y1='292' x2='850' y2='308' stroke='var(--ink2)'/>
+<text x='500' y='322' text-anchor='middle' font-size='14'>72,6 m</text>
+<text x='150' y='30' font-size='12' class='mut'>Escala vertical exagerada ≈ 8,6 veces (1,5 m de agua frente a 72,6 m de lado)</text>
+</svg></div>
+<div class='fig-texto'>
+<div><h4>Qué muestra</h4>
+<p>El orificio está en el fondo. Su salida crece con la raíz de la carga, O = C<sub>d</sub>A<sub>o</sub>√(2gh), y solo llega a 1,08 m³/s, el pico previo, cuando el tanque está lleno
+(h = 1,5 m). Por eso el tanque se llena mientras la entrada supera la salida y se vacía después: el volumen es la diferencia entre los dos hidrogramas, que se calcula con el
+tránsito de piscina nivelada.</p>
+<p class='leer'><b>Vertedero de excedencias (propuesta nueva).</b> Si llega una tormenta mayor que la de 25 años, el agua tiene que salir por un sitio controlado.
+Para pasar el pico urbano completo (3,79 m³/s) con 0,3 m de carga, Q = C<sub>w</sub>L h<sup>3/2</sup> con C<sub>w</sub> ≈ 1,7 da L ≈ 13,6 m (8,8 m con 0,4 m).
+Esto no estaba en el diseño de Marlin: hay que revisarlo.</p></div>
+<div><h4>Cómo se construyó</h4>
+<p>Volumen, lámina, C<sub>d</sub> y área del orificio son los del problema B. A<sub>s</sub> = V/h<sub>máx</sub> en un tanque de paredes verticales.
+Comprobación: 0,6 × 0,332 × √(2 × 9,81 × 1,5) = 1,08 m³/s. Tiempo de vaciado sin entrada:
+t = 2A<sub>s</sub>√h<sub>máx</sub>/(C<sub>d</sub>A<sub>o</sub>√(2g)) ≈ 4,1 h.</p>
+<p class='leer'><b>Supuestos que faltan.</b> El nivel freático somero de la llanura del Spree limita la profundidad (por eso 1,5 m). No se diseñaron la rejilla de la entrada,
+la protección a la salida ni la impermeabilización. Con el orificio en el fondo, la carga real se mide desde su centro (0,33 m más arriba): eso baja un poco la salida máxima.</p></div>
+</div>
+<p class='meta'><span class='script'>codigo/punto2/10_geometria_obras.py</span> · Productos: <a href='productos/punto2/hidraulica_obras.csv' download>hidraulica_obras.csv</a></p>
+</article>
+<article class='fig'>
+<header class='fig-h'><h3>Modelo 3D del tanque (escala vertical exagerada × 8)</h3><span class='tipo int'>interactiva</span></header>
+<div class='fig-cuerpo'><div id='g-obraB' class='plotb' style='min-height:430px'></div></div>
+<p class='meta'>Arrastre para girar. Lámina de agua a 1,5 m; a la izquierda la entrada, a la derecha el orificio (azul) y el vertedero (ocre).</p>
+</article>
+<p class='note'><b>Fuentes:</b> Chow et al. (1988), §8.2 (piscina nivelada) y §15.4 (detención); Kuiry y Sen (2021), cap. 3 (orificio); Chow (1959), <i>Open-Channel Hydraulics</i> (vertederos; verificar el C<sub>w</sub> de cresta ancha en el capítulo correspondiente);
+diseño del problema B (diapositiva anterior).</p>
+</section><section class='slide' id='p24b-pico' data-g='a' data-sec='2 · Diseño hidrológico'><p class='kicker k-arch'>Punto 2 · 2.4 · Problema B</p><h2>¿Por qué importa dónde cae el pico de la lluvia?</h2>
 <div class='stackfig'><div class='panel'><a href='img/problemaB_hiet.webp' target='_blank' rel='noopener' title='Abrir en tamaño completo'><img class='figimg' src='img/problemaB_hiet.webp' width='3000' height='680' alt='Hietogramas de bloques alternos' loading='lazy'></a></div>
 <div class='txtcols'><div>
 <div class='tw'><table class='tb'><thead><tr><th>Pico al…</th><th>Volumen del tanque (m³)</th><th>Tanque lleno en el minuto</th><th>Vaciado tras la lluvia (h)</th></tr></thead><tbody><tr><td>inicio</td><td>6 500</td><td>64</td><td>0,0</td></tr><tr><td>centro</td><td>7 900</td><td>226</td><td>1,4</td></tr><tr><td>final</td><td>7 700</td><td>396</td><td>3,6</td></tr></tbody></table></div>
@@ -1477,6 +1630,69 @@ const G = {
     ], base({ barmode: "group", bargap: 0.18, margin: { l: 56, r: 12, t: 16, b: 64 },
       xaxis: Object.assign(base().xaxis, { tickangle: -45 }), yaxis: Object.assign(base().yaxis, { title: "mm/año" }),
       legend: { orientation: "h", y: 1.12, x: 0, font: { size: 12 } } }), CFG);
+  },
+
+  /* ───── 3D de las obras del punto 2 (geometría de codigo/punto2/10_geometria_obras.py) ───── */
+  "p24-obra": () => {
+    // prisma extruido en y a partir de un polígono convexo en (x, z)
+    const prisma = (pol, y0, y1, color, op, name) => {
+      const n = pol.length, X = [], Y = [], Z = [], I = [], J = [], K = [];
+      pol.forEach(([x, z]) => { X.push(x); Y.push(y0); Z.push(z); }); pol.forEach(([x, z]) => { X.push(x); Y.push(y1); Z.push(z); });
+      for (let i = 1; i < n - 1; i++) { I.push(0, n); J.push(i, n + i); K.push(i + 1, n + i + 1); }
+      for (let i = 0; i < n; i++) { const a = i, b = (i + 1) % n; I.push(a, b); J.push(b, n + b); K.push(n + a, n + a); }
+      return { type: "mesh3d", x: X, y: Y, z: Z, i: I, j: J, k: K, color, opacity: op, name, flatshading: true, hoverinfo: "name", showlegend: true };
+    };
+    const D = 1.0, L = 12, S0 = 0.005, yn = 0.569, th = 2 * Math.acos(1 - 2 * yn / D), Tn = D * Math.sin(th / 2);
+    // tubo como malla triangulada: anillos en x, m puntos por anillo; solo la mitad superior (se ve el agua por abajo)
+    const tubo = (r, a0, a1, name, color, op) => {
+      const m = 28, nx = 12, X = [], Y = [], Z = [], I = [], J = [], K = [];
+      for (let i = 0; i <= nx; i++) for (let j = 0; j <= m; j++) {
+        const x = L * i / nx, t = a0 + (a1 - a0) * j / m; X.push(x); Y.push(r * Math.cos(t)); Z.push(0.5 + r * Math.sin(t) - S0 * x);
+      }
+      for (let i = 0; i < nx; i++) for (let j = 0; j < m; j++) {
+        const p = i * (m + 1) + j, q = p + m + 1; I.push(p, p + 1); J.push(q, q); K.push(p + 1, q + 1);
+      }
+      return { type: "mesh3d", x: X, y: Y, z: Z, i: I, j: J, k: K, color, opacity: op, name, flatshading: false, hoverinfo: "name", showlegend: true };
+    };
+    const gris = css("--muted"), agua = css("--vPL"), tierra = css("--sw");
+    const tr = [
+      prisma([[0.6, 0], [4, 1.7], [8, 1.7], [11.4, 0]], -4.5, 4.5, tierra, 0.22, "terraplén del camino"),
+      prisma([[4, 1.7], [8, 1.7], [8, 1.75], [4, 1.75]], -4.5, 4.5, css("--ink2"), 0.45, "calzada (corona 4 m)"),
+      tubo(0.55, 0, Math.PI, "tubo DN 1 000 (mitad superior)", gris, 0.75),
+      tubo(0.55, Math.PI, 2 * Math.PI, "tubo (mitad inferior)", gris, 0.35),
+      { type: "mesh3d", name: `agua: y = ${yn.toFixed(2).replace(".", ",")} m`, color: agua, opacity: 0.8, hoverinfo: "name", showlegend: true,
+        x: [-4, L + 5, L + 5, -4], y: [-Tn / 2, -Tn / 2, Tn / 2, Tn / 2], z: [yn + 0.02, yn - S0 * L - 0.03, yn - S0 * L - 0.03, yn + 0.02], i: [0, 0], j: [1, 2], k: [2, 3] },
+      prisma([[-0.25, -0.1], [0, -0.1], [0, 1.4], [-0.25, 1.4]], -1.6, 1.6, gris, 0.6, "muro de cabecera"),
+      prisma([[L, -0.16], [L + 0.25, -0.16], [L + 0.25, 1.34], [L, 1.34]], -1.6, 1.6, gris, 0.6, "muro de salida"),
+      prisma([[L + 0.25, -0.1], [L + 5, -0.12], [L + 5, -0.02], [L + 0.25, 0]], -1.4, 1.4, css("--ink2"), 0.5, "enrocado"),
+      { type: "mesh3d", name: "terreno / zanja", color: css("--vQ"), opacity: 0.12, hoverinfo: "skip", showlegend: false,
+        x: [-4, L + 5, L + 5, -4], y: [-4.5, -4.5, 4.5, 4.5], z: [-0.12, -0.12, -0.12, -0.12], i: [0, 0], j: [1, 2], k: [2, 3] }
+    ];
+    const ax = t => ({ title: t, color: css("--muted"), gridcolor: css("--line"), backgroundcolor: "rgba(0,0,0,0)", showbackground: false });
+    Plotly.react("g-obraA", tr, base({ margin: { l: 0, r: 0, t: 0, b: 0 }, legend: { orientation: "h", y: 0, x: 0, font: { size: 11 } },
+      scene: { xaxis: ax("a lo largo del tubo (m)"), yaxis: ax("eje del camino (m)"), zaxis: ax("cota (m)"),
+        aspectmode: "manual", aspectratio: { x: 1.6, y: 1, z: 0.55 }, camera: { eye: { x: -1.25, y: -1.55, z: 1.05 } } } }), CFG);
+  },
+
+  "p24b-obra": () => {
+    const Ls = 72.6, H = 1.8, h = 1.5, caja = (x0, x1, y0, y1, z0, z1, color, op, name, legend = true) => ({
+      type: "mesh3d", x: [x0, x1, x1, x0, x0, x1, x1, x0], y: [y0, y0, y1, y1, y0, y0, y1, y1], z: [z0, z0, z0, z0, z1, z1, z1, z1],
+      i: [0, 0, 4, 4, 0, 0, 1, 1, 2, 2, 3, 3], j: [1, 2, 5, 6, 1, 5, 2, 6, 3, 7, 0, 4], k: [2, 3, 6, 7, 5, 4, 6, 5, 7, 6, 4, 7],
+      color, opacity: op, name, flatshading: true, hoverinfo: "name", showlegend: legend });
+    const muro = css("--ink2"), t = 0.4;
+    const tr = [
+      caja(0, Ls, 0, Ls, -0.3, 0, muro, 0.35, "losa de fondo"),
+      caja(-t, 0, 0, Ls, 0, H, muro, 0.35, "muros (h = 1,8 m)"), caja(Ls, Ls + t, 0, Ls, 0, H, muro, 0.35, "muro", false),
+      caja(0, Ls, -t, 0, 0, H, muro, 0.35, "muro", false), caja(0, Ls, Ls, Ls + t, 0, H, muro, 0.35, "muro", false),
+      caja(0, Ls, 0, Ls, 0, h, css("--vPL"), 0.45, "agua a h_máx = 1,5 m (≈ 7 900 m³)"),
+      caja(Ls + t, Ls + 6, Ls / 2 - 0.33, Ls / 2 + 0.33, 0, 0.65, css("--acc"), 0.9, "orificio Ø 0,65 m → zanja"),
+      caja(Ls + t, Ls + 3, Ls / 2 - 20, Ls / 2 - 6.4, h, h + 0.05, css("--sw"), 0.9, "vertedero ≈ 13,6 m (propuesta)"),
+      caja(-8, -t, Ls / 2 - 0.6, Ls / 2 + 0.6, 1.0, 1.6, css("--ink2"), 0.8, "entrada de la red urbana (pico 3,79 m³/s)")
+    ];
+    const ax = t2 => ({ title: t2, color: css("--muted"), gridcolor: css("--line"), showbackground: false });
+    Plotly.react("g-obraB", tr, base({ margin: { l: 0, r: 0, t: 0, b: 0 }, legend: { orientation: "h", y: 0, x: 0, font: { size: 11 } },
+      scene: { xaxis: ax("x (m)"), yaxis: ax("y (m)"), zaxis: ax("z (m)"), aspectmode: "manual", aspectratio: { x: 1.5, y: 1.5, z: 0.3 },
+        camera: { eye: { x: -1.3, y: -1.65, z: 0.95 } } } }), CFG);
   }
 };
 const dibujados = new Set();

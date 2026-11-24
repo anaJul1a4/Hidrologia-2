@@ -1,0 +1,23 @@
+problema,magnitud,valor,unidad
+A,capacidad a tubo lleno Q_ll,1.695,m3/s
+A,velocidad a tubo lleno,2.16,m/s
+A,"tirante normal y_n (caudal de diseño, Q = 1.05)",0.569,m
+A,"y_n/D (caudal de diseño, Q = 1.05)",0.569,-
+A,"tirante crítico y_c (caudal de diseño, Q = 1.05)",0.588,m
+A,"velocidad (caudal de diseño, Q = 1.05)",2.273,m/s
+A,"número de Froude (caudal de diseño, Q = 1.05)",1.062,-
+A,"energía específica (caudal de diseño, Q = 1.05)",0.833,m
+A,"tirante normal y_n (cerca de la capacidad, Q = 1.69)",0.819,m
+A,"y_n/D (cerca de la capacidad, Q = 1.69)",0.819,-
+A,"tirante crítico y_c (cerca de la capacidad, Q = 1.69)",0.751,m
+A,"velocidad (cerca de la capacidad, Q = 1.69)",2.461,m/s
+A,"número de Froude (cerca de la capacidad, Q = 1.69)",0.831,-
+A,"energía específica (cerca de la capacidad, Q = 1.69)",1.127,m
+A,pendiente crítica S_c (Q de diseño),0.453,%
+B,área en planta A_s = V/h_máx,5267,m2
+B,lado de un tanque cuadrado,72.6,m
+B,diámetro del orificio,0.65,m
+B,salida máxima Cd·Ao·√(2 g h_máx),1.081,m3/s
+B,tiempo de vaciado desde h_máx sin entrada,4.1,h
+B,vertedero de excedencias para Q_post con h = 0.3 m,13.6,m de cresta
+B,vertedero de excedencias para Q_post con h = 0.4 m,8.8,m de cresta
