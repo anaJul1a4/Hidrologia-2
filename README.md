@@ -29,13 +29,13 @@ productos/punto1/               salidas: balance_cubeta_datos.js (lo lee index.h
 ## Reproducir
 
 ```
-python codigo/punto1/00_balance_cubeta.py   balance diario del suelo (diapositiva p1-balance)
-codigo/punto2/10_geometria_obras.py  ortofoto, alcantarillas reales de OSM e hidráulica de las obras (requiere Pillow y pyproj)
-codigo/punto2/11_escenarios_clima.py escenarios de cambio climático sobre la IDF y la alcantarilla
-datos/punto2/                   ortofoto DOP20 (GeoBasis-DE/LGB, dl-de/by-2-0) y extracto de OpenStreetMap (ODbL)
+pip install -r requirements.txt
+python codigo/punto1/00_balance_cubeta.py
+python codigo/punto2/10_geometria_obras.py
+python codigo/punto2/11_escenarios_clima.py
 ```
 
-Solo usa la biblioteca estándar de Python 3. Si existe `datos/punto1/eto_era5land_diaria_cuenca.csv`
+Los scripts 00 y 11 solo usan la biblioteca estándar de Python 3; el 10 necesita Pillow y pyproj. Si existe `datos/punto1/eto_era5land_diaria_cuenca.csv`
 (columnas `date`, `eto_mm`: ETo FAO-56 diaria de ERA5-Land del apartado 1.1.a), la usa como segunda demanda en lugar de
 PISCOeo × 0,906.
 
