@@ -1,0 +1,33 @@
+{
+ "chicama_hoy": {
+  "bosque_pct": 15.0,
+  "tipo": "bosque nativo",
+  "omega": 1.572,
+  "ET_mm": 437,
+  "Q_mm": 387
+ },
+ "chicama_sin_bosque": {
+  "bosque_pct": 0.0,
+  "tipo": "bosque nativo",
+  "omega": 1.54,
+  "ET_mm": 424,
+  "Q_mm": 400
+ },
+ "P_presidenta_mm": 1852,
+ "P_presidenta_anios": [
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "Q_presidenta_mm": 785,
+ "ET_presidenta_mm": 1066,
+ "Q_sobre_P_presidenta": 0.42
+}

@@ -303,7 +303,7 @@ P("<b>Hipótesis de diseño.</b> Se esperaría que el diámetro dependa sobre to
 P("<b>Objetivos.</b> (1) Calcular la ETo FAO-56 de la cuenca y probar su sensibilidad al método, la fuente y la resolución; "
   "(2) estimar la evapotranspiración real y decidir qué la limita cada mes; (3) evaluar los cambios de la demanda y su atribución; "
   "(4) construir la IDF de Cottbus con su incertidumbre; (5) dimensionar las dos obras y su riesgo efectivo; (6) discutir la escala, "
-  "el cambio climático y la diferencia con una quebrada del Valle de Aburrá.")
+  "el cambio de cobertura, el cambio climático y la diferencia con una quebrada del Valle de Aburrá.")
 
 # ====================================================================== 2. Metodología
 H1("2. Metodología")
@@ -592,10 +592,42 @@ P("La diferencia no está en el método sino en la hidroclimatología y la geomo
   "laderas empinadas y t<sub>c</sub> de minutos, falla por energía, obstrucción y arrastre de sedimentos. Por eso tampoco se puede "
   "copiar el periodo de retorno: EPM pide 10 años para áreas de 10–1 000 ha y 100 años para canales que drenan más de 1 000 ha.")
 
-H2("3.10 Cambio climático y adaptación de la obra")
+H2("3.10 Deforestación y urbanización: el balance anual y los caudales pico")
+P("La presión urbanística sobre las laderas actúa en dos escalas que conviene separar. En la escala anual, quitar bosque reduce la "
+  "evapotranspiración (raíces menos profundas, menos interceptación y menos rugosidad) y deja más agua para el caudal (Bosch y "
+  "Hewlett, 1982; Zhang et al., 2001). En la escala de la crecida, impermeabilizar y deforestar reduce la infiltración y acorta el "
+  "tiempo de concentración, y los dos efectos se multiplican en el caudal pico, como en el problema B.")
+P("<b>Balance anual en el Chicama.</b> Con la curva de Fu y el parámetro ω ligado a la cobertura del apartado 1.5 (calibrado para que "
+  "pasar de pastizal a bosque nativo aumente la ET 19 %, como en las curvas de Zhang et al., 2001), quitar el 15 % de bosque actual sube "
+  "el caudal solo de 387 a 400 mm/año (+3 %; Figura 19a). El efecto es pequeño porque la cuenca está limitada por agua: hay poca agua "
+  "«sobrante» que el bosque pueda evaporar. En una cuenca húmeda la misma deforestación pesaría más.")
+P("<b>Balance anual en La Presidenta.</b> El pluviómetro SIATA 41 registra 1 850 mm/año en promedio (2015–2025; de 1 125 mm en 2015 a "
+  "2 909 mm en 2022, año de La Niña), más del doble que el Chicama. Con el caudal medio que simula Corantioquia (2023) para la salida "
+  "(333 L/s, 785 mm/año), Q/P ≈ 0,42 y P − Q ≈ 1 070 mm/año: la ET es más del doble que en el Chicama porque sobran agua y energía "
+  "(clima húmedo, sin una estación seca larga). Al urbanizar, el agua que caía sobre suelo y vegetación cae sobre techos y vías: "
+  "se evapora menos y se infiltra menos, y más lluvia sale como escorrentía rápida. El caudal anual puede aumentar mientras el flujo "
+  "base baja, porque disminuye la recarga del suelo. Este caudal anual es simulado (modelo de tanques de Corantioquia), y el "
+  "pluviómetro está en la parte baja de una cuenca que sube a 2 800 m: son órdenes de magnitud, no un balance observado.")
+FIG(PR2 / "fig_cobertura.png", "Efecto de la cobertura. (a) Chicama: ET y caudal anuales con la curva de Fu y ω según el porcentaje de "
+    "bosque nativo o de plantación (modelo del apartado 1.5). (b) Parte alta de La Presidenta: caudal pico con la norma EPM para cuatro "
+    "coberturas de su tabla 6-3 (I = 0,30 a 0,90; C = 0,15 + 0,85·I; t<sub>c</sub> de la FAA; IDF Medellín) frente a los picos de "
+    "Cottbus. Script codigo/punto2/19_cobertura_caudales.py.")
+P("<b>Caudales pico.</b> En la parte alta de La Presidenta, la norma de EPM permite seguir la secuencia de presión urbanística con sus "
+  "coeficientes de impermeabilidad (Figura 19b). Pasar de ladera con vegetación (I = 0,30) a ladera sin vegetación (0,60) duplica el "
+  "pico para 25 años (5,8 → 11,3 m³/s) antes de construir nada, porque C sube de 0,41 a 0,66 y el t<sub>c</sub> baja de 21 a 14 min. "
+  "La urbanización residencial lo lleva a 15,1 m³/s (×2,6) y la comercial a 19,8 m³/s (×3,4), con t<sub>c</sub> de 6 min. En Cottbus "
+  "urbanizar la mitad de la microcuenca multiplicó el pico por 3,5: el factor es parecido, pero en Medellín se aplica sobre un caudal "
+  "base cinco veces mayor por km². Una obra dimensionada con la cobertura actual queda corta si la ladera se deforesta o se urbaniza "
+  "durante su vida útil; por eso la norma de EPM pide estimar C para el final del periodo de diseño con el plan de ordenamiento.")
+P("<b>¿Se ve en los datos?</b> En las 427 crecidas de La Presidenta no hay tendencia detectable entre 2014 y 2026 en el tiempo de subida, "
+  "en el retardo ni en la subida de nivel por milímetro de lluvia (Kendall, p ≥ 0,16). Con 12 años, una cuenca ya muy urbanizada al "
+  "comenzar el registro y los años de La Niña de 2020–2023, el efecto de los cambios recientes de cobertura no se puede separar de la "
+  "variabilidad del clima. Atribuirlo exigiría mapas de cobertura por año y un registro más largo.")
+
+H2("3.11 Cambio climático y adaptación de la obra")
 P("En la IDF, a(T) = μ + σ·y<sub>T</sub>: el término de la escala es el 57 % de la lluvia de 25 años y el 66 % de la de 100 años. Por "
   "eso la variabilidad pesa más que la media: si σ aumenta 25 % con la misma media, la lluvia de diseño sube ≈ 14 %, más que con 1,5 °C "
-  "de calentamiento a 7 %/°C (≈ 11 %; Figura 19). Con +1,5 °C la lluvia de 25 años de hoy pasaría a repetirse cada ≈ 15 años. El DN 1 000 "
+  "de calentamiento a 7 %/°C (≈ 11 %; Figura 20). Con +1,5 °C la lluvia de 25 años de hoy pasaría a repetirse cada ≈ 15 años. El DN 1 000 "
   "resiste porque D ∝ Q<sup>3/8</sup>: un 10 % más de caudal pide 3–4 % más de diámetro, y el T efectivo del tubo pasa de ≈ 470 a ≈ 230 "
   "años (≈ 180 con +2 °C y ≈ 80 si la tasa fuera de 14 %/°C). Las pendientes positivas de los máximos de Cottbus (+2 a +8 % por década, "
   "no significativas) son compatibles con esa intensificación, pero con 30 años la incertidumbre de muestreo (±25 % en el diámetro) "
@@ -607,7 +639,7 @@ P("Las decisiones de adaptación que se desprenden son cuatro: diseñar con la b
   "obras que fallen sin romperse (vertedero de excedencias, terraplén que pueda desbordar); dejar el margen barato del diámetro comercial "
   "siguiente cuando el costo esperado lo justifica; y revisar la IDF cada década con la tendencia que ya muestran los datos.")
 
-H2("3.11 Síntesis física y tabla de evidencias")
+H2("3.12 Síntesis física y tabla de evidencias")
 TAB([["Resultado principal", "Mecanismo propuesto", "Evidencia propia", "Fuente consultada", "Limitación o alternativa"],
      ["Demanda ≈ 1 210 mm/año, casi constante, 90 % radiativa", "Sol alto todo el año; nubes de la temporada húmeda recortan R<sub>s</sub>",
       "Ciclo de ETo y términos; sensibilidad R<sub>s</sub> −10 % → −7,3 %", "Allen et al. (1998); Hoyos (2026)",
@@ -625,7 +657,8 @@ TAB([["Resultado principal", "Mecanismo propuesto", "Evidencia propia", "Fuente 
      ["Riesgo efectivo ≈ 10 % frente a 71 %", "Salto al diámetro comercial", "Monte Carlo con bootstrap", "Chow et al. (1988)",
       "Depende de la cola de la GEV"],
      ["La misma obra en Medellín lleva 4–5 veces más caudal por km²", "t<sub>c</sub> de minutos en laderas de 47 %",
-      "427 crecidas de SIATA; IDF de EPM", "EPM (2025); Corantioquia (2023)", "Nivel sin curva de gasto"]],
+      "427 crecidas de SIATA; IDF de EPM", "EPM (2025); Corantioquia (2023)", "Nivel sin curva de gasto"],
+     ["Deforestar la ladera duplica el pico; urbanizar lo multiplica por 2,6–3,4", "Menos infiltración y t<sub>c</sub> más corto", "Coberturas de la tabla 6-3 de EPM; Fu con ω según cobertura", "Bosch y Hewlett (1982); Zhang et al. (2001)", "Sin tendencia detectable en 12 años de SIATA; C de tabla"]],
     "Tabla de evidencias: resultado, mecanismo, evidencia propia, fuente y limitación.", [0.2, 0.22, 0.22, 0.17, 0.19])
 
 # ====================================================================== 4. Conclusiones
@@ -644,6 +677,9 @@ B("<b>La pregunta del punto 2.</b> El diámetro de una obra pequeña en terreno 
   "lluvia o la distribución, y el riesgo real lo controla el diámetro comercial. Se recomienda una alcantarilla de concreto DN 1 000 "
   "con pendiente de 0,4–0,5 % y un tanque de detención de ≈ 7 900 m³ con orificio de 0,65 m y vertedero de excedencias si se urbaniza; "
   "la incertidumbre del diámetro calculado queda cubierta por el diámetro comercial.")
+B("<b>Cobertura.</b> En la escala anual, quitar bosque aumenta poco el caudal de una cuenca limitada por agua como el Chicama. En la "
+  "escala de la crecida, deforestar y urbanizar una ladera andina multiplica el pico, porque reduce la infiltración y acorta el tiempo "
+  "de concentración a la vez; el diseño debe usar la cobertura esperada al final de la vida útil y no la actual.")
 B("<b>Escala, región y clima.</b> El método racional es válido en la microcuenca y no en el Chicama. En una quebrada andina como La "
   "Presidenta la misma obra lleva varias veces más caudal y falla por energía; el tiempo de respuesta medido valida la fórmula de "
   "Kirpich. La intensificación de los extremos reduce el periodo de retorno efectivo de la obra, pero con 30 años de datos la "
@@ -660,7 +696,7 @@ P("Nivel A (abierto) de la política del curso. Herramienta: Claude (Anthropic),
   "noviembre de 2026. [El grupo debe declarar también las herramientas usadas en la versión inicial del sitio de Marlin Schwebel.]")
 B("<b>Tareas en que intervino:</b> revisión crítica del sitio inicial frente a la Tarea 1; adaptación de la página a la línea gráfica de la "
   "Tarea 1; balance diario del suelo; geometría e hidráulica de las obras (esquemas 2D y 3D, alcantarillas reales de OpenStreetMap, "
-  "ortofoto); escenarios de cambio climático; búsqueda de documentos oficiales (Corantioquia, EPM) y análisis de La Presidenta con "
+  "ortofoto); escenarios de cambio climático y de cobertura; búsqueda de documentos oficiales (Corantioquia, EPM) y análisis de La Presidenta con "
   "datos de SIATA; diapositivas de conceptos y de síntesis; figuras estáticas y un borrador de este informe a partir de los resultados "
   "del grupo. [El grupo debe precisar qué scripts y secciones escribió cada integrante.]")
 B("<b>Verificaciones:</b> la ETo de un día se reprodujo a mano y con pyet; el balance diario se programó dos veces (Python y JavaScript "
@@ -685,6 +721,7 @@ REFS = [
     "Allen, R. G., Pereira, L. S., Raes, D. y Smith, M. (1998). <i>Crop evapotranspiration: guidelines for computing crop water requirements</i>. FAO Irrigation and Drainage Paper 56. FAO, Roma.",
     "Aybar, C., Fernández, C., Huerta, A., Lavado, W., Vega, F. y Felipe-Obando, O. (2020). Construction of a high-resolution gridded rainfall dataset for Peru from 1981 to the present day. <i>Hydrological Sciences Journal</i>, 65(5), 770–785. doi:10.1080/02626667.2019.1649411",
     "Bergström, S. (1992). <i>The HBV model: its structure and applications</i>. SMHI Reports Hydrology 4, Norrköping. [verificar]",
+    "Bosch, J. M. y Hewlett, J. D. (1982). A review of catchment experiments to determine the effect of vegetation changes on water yield and evapotranspiration. <i>Journal of Hydrology</i>, 55, 3–23. doi:10.1016/0022-1694(82)90117-2",
     "Bouchet, R. J. (1963). Évapotranspiration réelle et potentielle, signification climatique. <i>IAHS Publication</i>, 62, 134–142.",
     "Budyko, M. I. (1974). <i>Climate and Life</i>. Academic Press, Nueva York.",
     "CAMELS-PE v1.0.1 (2026). Conjunto de datos de cuencas del Perú. Zenodo. doi:10.5281/zenodo.21195425",

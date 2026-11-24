@@ -1422,6 +1422,37 @@ EPM (2025), GD-AS002 <i>Normas de diseño de sistemas de alcantarillado</i>, tab
 citado por El Colombiano; Kirpich (1940); Témez (1978); Giandotti (1934).</p>
 </article>
 </section>
+<section class='slide' id='p2-cobertura' data-g='a' data-sec='2 · Diseño hidrológico'>
+<p class='kicker'>Punto 2 · Deforestación y urbanización</p>
+<h2>Deforestar una ladera de El Poblado duplica el caudal pico antes de construir nada; en el Chicama casi no cambia el balance anual</h2>
+<div class='datos-clave'>
+<div class='dato'>Chicama sin su 15 % de bosque<b>Q 387 → 400 mm/año (+3 %)</b></div>
+<div class='dato'>La Presidenta, lluvia (SIATA 41)<b>≈ 1 850 mm/año</b></div><div class='dato'>Q/P (Corantioquia)<b>≈ 0,42</b></div>
+<div class='dato'>Pico T = 25, ladera vegetada → deforestada<b>5,8 → 11,3 m³/s</b></div><div class='dato'>Urbanizada / comercial<b>15,1 / 19,8 m³/s</b></div>
+</div>
+<article class='fig'>
+<header class='fig-h'><h3>Efecto de la cobertura en la escala anual y en la crecida</h3><span class='tipo'>imagen</span></header>
+<div class='fig-cuerpo'><img src='img/p2_cobertura.png' alt='Balance anual del Chicama según la cobertura de bosque y caudal pico de La Presidenta alta según cuatro coberturas' loading='lazy'></div>
+<div class='fig-texto'>
+<div><h4>Qué muestra</h4>
+<p><b>Escala anual.</b> Quitar bosque reduce la ET y deja más agua para el río (Bosch y Hewlett, 1982). En el Chicama el efecto es pequeño (+13 mm/año) porque la cuenca
+está limitada por agua: hay poca agua «sobrante» que el bosque pueda evaporar. En La Presidenta llueve más del doble y la ET es ≈ 1 070 mm/año: urbanizar reduce la ET
+y la infiltración, el caudal anual puede subir mientras el flujo base baja.</p>
+<p><b>Escala de la crecida.</b> Deforestar la ladera sube C de 0,41 a 0,66 y baja t<sub>c</sub> de 21 a 14 min: el pico se duplica. Urbanizar lo multiplica por 2,6–3,4.
+En Cottbus el factor fue 3,5, pero sobre un caudal por km² cinco veces menor. Una obra diseñada con la cobertura de hoy queda corta si la ladera cambia: EPM pide usar
+la cobertura del final del periodo de diseño.</p>
+<p class='leer'><b>¿Se ve en los datos?</b> No: en 427 crecidas (2014–2026) no hay tendencia en el tiempo de subida ni en la subida por mm de lluvia (p ≥ 0,16). Con 12 años y
+La Niña 2020–2023, el efecto no se separa de la variabilidad del clima.</p></div>
+<div><h4>Cómo se construyó</h4>
+<p>(a) Curva de Fu con ω según la cobertura (modelo del apartado 1.5, calibrado con Zhang et al., 2001), sin reciclaje ni niebla. (b) Norma EPM GD-AS002: coeficientes de
+impermeabilidad de la tabla 6-3 (ladera con vegetación 0,30; sin vegetación 0,60; residencial 0,75; comercial 0,90), C = 0,15 + 0,85·I, t<sub>c</sub> de la FAA e IDF
+Medellín. Lluvia anual del pluviómetro 41 escalada a año completo en los años con ≥ 80 % de datos; caudal medio simulado por Corantioquia (2023).</p>
+<p class='leer'><b>Limitaciones.</b> El caudal anual de La Presidenta es de un modelo, no observado; el pluviómetro está en la parte baja; C es de tabla y no depende de la humedad previa.</p></div>
+</div>
+<p class='meta'><span class='script'>codigo/punto2/19_cobertura_caudales.py</span> · Productos: <a href='productos/punto2/cobertura_presidenta_pico.csv' download>cobertura_presidenta_pico.csv</a>
+· <a href='productos/punto2/cobertura_chicama.csv' download>cobertura_chicama.csv</a> · <a href='productos/punto2/cobertura_resumen.json' download>cobertura_resumen.json</a></p>
+</article>
+</section>
 <section class='slide' id='p25-clima' data-g='a' data-sec='2 · Diseño hidrológico'>
 <p class='kicker'>Punto 2 · Cambio climático y adaptación</p>
 <h2>¿Qué le pasa a la obra si los extremos se intensifican? La desviación estándar decide más que la media</h2>
@@ -1478,7 +1509,7 @@ Cálculo en el navegador con los parámetros publicados en 2.3; se puede reprodu
 <div class='two even' style='gap:18px'>
 <article class='fig' style='margin:0'><header class='fig-h'><h3>Lo más importante de cada apartado</h3><span class='tipo'>conclusiones</span></header>
 <div class='tw' style='padding:0 14px 10px'><table class='tb'><thead><tr><th>Apartado</th><th>Conclusión</th></tr></thead><tbody>
-<tr><td>2.1 Sitio y datos</td><td>Cerca del Chicama no hay lluvia subdiaria suficiente (Cajamarca solo 6 h); Cottbus (DWD 00880) tiene 10 min y 30 años válidos tras el control de calidad.</td></tr><tr><td>2.2 Extremos</td><td>GEV por L-momentos: límite teórico, mejor ajuste y estimación estable. Hasta T ≈ 10 todas las distribuciones coinciden; a T = 100 difieren 13–40 %. Sin tendencia significativa, pero todas positivas.</td></tr><tr><td>2.3 IDF</td><td>i = a(T)/(d + 0,137)<sup>0,872</sup>, 0,80–1,11 veces la oficial KOSTRA-DWD-2020 y dentro de su incertidumbre. La tormenta de junio de 2018 fue rara a 10–60 min y común a 24 h.</td></tr><tr><td>2.4 A</td><td>La fórmula de t<sub>c</sub> mueve el diámetro más que la lluvia (29 % frente a 25 % del IC de la IDF, 15 % de C y 1 % de la distribución).</td></tr><tr><td>2.4 B</td><td>El pico al centro del hietograma exige 24 % más volumen que el trapecio crítico; C es lo que más mueve el volumen (±29 %).</td></tr><tr><td>Escala</td><td>El racional vale en 0,44 km² (FRA 0,98) y no en el Chicama de 2 170 km² (FRA 0,67 en 1 h, t<sub>c</sub> ≈ 6 h).</td></tr><tr><td>La Presidenta</td><td>La quebrada responde en ≈ 25 min (427 crecidas medidas por SIATA); Kirpich es la única fórmula cercana. La misma obra llevaría 4–5 veces más caudal por km² y superaría los 5 m/s de EPM.</td></tr><tr><td>2.5.1 Costo</td><td>El mínimo del costo esperado es plano y cae en T &gt; 100 (zona de extrapolación); T = 25 queda corto en costo y el DN 1 000 ya cubre T ≈ 100.</td></tr></tbody></table></div></article>
+<tr><td>2.1 Sitio y datos</td><td>Cerca del Chicama no hay lluvia subdiaria suficiente (Cajamarca solo 6 h); Cottbus (DWD 00880) tiene 10 min y 30 años válidos tras el control de calidad.</td></tr><tr><td>2.2 Extremos</td><td>GEV por L-momentos: límite teórico, mejor ajuste y estimación estable. Hasta T ≈ 10 todas las distribuciones coinciden; a T = 100 difieren 13–40 %. Sin tendencia significativa, pero todas positivas.</td></tr><tr><td>2.3 IDF</td><td>i = a(T)/(d + 0,137)<sup>0,872</sup>, 0,80–1,11 veces la oficial KOSTRA-DWD-2020 y dentro de su incertidumbre. La tormenta de junio de 2018 fue rara a 10–60 min y común a 24 h.</td></tr><tr><td>2.4 A</td><td>La fórmula de t<sub>c</sub> mueve el diámetro más que la lluvia (29 % frente a 25 % del IC de la IDF, 15 % de C y 1 % de la distribución).</td></tr><tr><td>2.4 B</td><td>El pico al centro del hietograma exige 24 % más volumen que el trapecio crítico; C es lo que más mueve el volumen (±29 %).</td></tr><tr><td>Escala</td><td>El racional vale en 0,44 km² (FRA 0,98) y no en el Chicama de 2 170 km² (FRA 0,67 en 1 h, t<sub>c</sub> ≈ 6 h).</td></tr><tr><td>La Presidenta</td><td>La quebrada responde en ≈ 25 min (427 crecidas medidas por SIATA); Kirpich es la única fórmula cercana. La misma obra llevaría 4–5 veces más caudal por km² y superaría los 5 m/s de EPM.</td></tr><tr><td>Cobertura</td><td>Deforestar la ladera duplica el pico de La Presidenta y urbanizar lo multiplica por 2,6–3,4; en el Chicama quitar el bosque solo sube el caudal anual 3 %.</td></tr><tr><td>2.5.1 Costo</td><td>El mínimo del costo esperado es plano y cae en T &gt; 100 (zona de extrapolación); T = 25 queda corto en costo y el DN 1 000 ya cubre T ≈ 100.</td></tr></tbody></table></div></article>
 <article class='fig' style='margin:0'><header class='fig-h'><h3>Limitaciones y cómo afectan la recomendación</h3><span class='tipo'>incertidumbre</span></header>
 <div class='tw' style='padding:0 14px 10px'><table class='tb'><thead><tr><th>Limitación</th><th>Efecto</th></tr></thead><tbody>
 <tr><td>Solo 30 años de máximos; la cola (ξ) se conoce mal</td><td>Más allá de T ≈ 60 años el cuantil depende de la forma supuesta; IC 95 % del 85 % del valor a T = 100.</td></tr><tr><td>Cambios de instrumento (1991, 2007, 2020), firmware 2021 y el dato dudoso de 2014</td><td>&lt; 3 % en las duraciones cortas del diseño; +33 % en 24 h si vale el pluviómetro diario.</td></tr><tr><td>t<sub>c</sub> en terreno casi plano (2 m de relieve), sin validación local</td><td>Es la mayor incertidumbre del diámetro; en Medellín sí se pudo validar con SIATA.</td></tr><tr><td>C de tablas, constante con el evento; no se modela la humedad previa</td><td>±20 % en C mueve D 15 % y el volumen del tanque ±29 %.</td></tr><tr><td>Estanque junto al cierre de la microcuenca; zanjas que la D8 sigue solo en parte</td><td>El racional no considera el almacenamiento del estanque: el pico real podría ser menor.</td></tr><tr><td>Sin control a la entrada (HDS-5) ni diseño de la protección de salida</td><td>El diámetro está verificado a flujo uniforme, no con la carga aguas arriba.</td></tr><tr><td>La Presidenta: nivel sin curva de gasto; pluviómetro en la parte baja; 11 años de lluvia</td><td>Se comparan tiempos e intensidades, no caudales pico observados.</td></tr><tr><td>Escenarios climáticos: escalado de 7 %/°C, sin modelos regionales</td><td>Es una sensibilidad, no una proyección para Brandeburgo.</td></tr></tbody></table></div></article>

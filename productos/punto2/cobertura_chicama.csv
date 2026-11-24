@@ -1,0 +1,15 @@
+bosque_pct,tipo,omega,ET_mm,Q_mm
+0.0,bosque nativo,1.54,424,400
+0.0,plantación,1.519,414,410
+5.0,bosque nativo,1.551,428,396
+5.0,plantación,1.537,422,402
+10.0,bosque nativo,1.561,433,391
+10.0,plantación,1.554,430,394
+15.0,bosque nativo,1.572,437,387
+15.0,plantación,1.572,437,387
+25.0,bosque nativo,1.593,446,378
+25.0,plantación,1.607,452,372
+50.0,bosque nativo,1.646,467,358
+50.0,plantación,1.695,484,340
+100.0,bosque nativo,1.751,503,321
+100.0,plantación,1.871,538,286

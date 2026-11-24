@@ -1,0 +1,5 @@
+cobertura,I,C,tc_min,i_T10_mm_h,Q_T10_m3_s,i_T25_mm_h,Q_T25_m3_s
+ladera con vegetación,0.3,0.405,21.4,81.9,5.03,93.8,5.76
+ladera deforestada,0.6,0.66,13.5,98.7,9.88,113.3,11.34
+"residencial, zonas duras",0.75,0.787,9.6,110.1,13.15,126.4,15.09
+comercial / pavimentos,0.9,0.915,5.7,124.4,17.26,142.9,19.83

@@ -11,7 +11,8 @@ El Tambo (Perú), la misma de la [Tarea 1](https://anajul1a4.github.io/Hidrologi
 - la diapositiva `p1-balance` (balance diario del suelo, adaptado de la figura #s14 de las notas del curso);
 - diapositivas de conceptos (`t1-conceptos`, `p2-conceptos`), de las obras (`p24-obra`, `p24b-obra`),
   la comparación con el Valle de Aburrá (`p2-aburra`), la quebrada La Presidenta con datos de SIATA y la norma de EPM (`p2-presidenta`)
-  y los escenarios de cambio climático (`p25-clima`).
+  la cobertura (`p2-cobertura`), los escenarios de cambio climático (`p25-clima`)
+  y las síntesis (`p1-sintesis`, `p2-sintesis`).
 
 ## Estructura
 
@@ -25,6 +26,7 @@ codigo/punto2/12_descarga_siata.py   descarga nivel (101) y lluvia (41) de SIATA
 codigo/punto2/13_cuencas_presidenta.py delimitación de La Presidenta con Copernicus GLO-30 y tiempos de concentración
 codigo/punto2/14_presidenta_respuesta.py crecidas, tiempos de subida y retardo, máximos anuales de lluvia
 codigo/punto2/15_presidenta_web.py   diseño con las reglas de EPM y datos de la diapositiva p2-presidenta
+codigo/punto2/19_cobertura_caudales.py deforestación y urbanización: balance anual y caudales pico
 codigo/informe/16_figuras_informe.py figuras estáticas del informe
 codigo/informe/17_esquemas_obras_png.py esquemas de las obras en PNG (Chrome o Edge sin interfaz)
 codigo/informe/18_informe.py         informe en PDF y Word (Informe_Tarea2_Chicama_Cottbus.*)
@@ -46,6 +48,7 @@ python codigo/punto2/12_descarga_siata.py
 python codigo/punto2/13_cuencas_presidenta.py
 python codigo/punto2/14_presidenta_respuesta.py
 python codigo/punto2/15_presidenta_web.py
+python codigo/punto2/19_cobertura_caudales.py
 python codigo/informe/16_figuras_informe.py
 python codigo/informe/17_esquemas_obras_png.py
 python codigo/informe/18_informe.py
